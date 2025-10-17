@@ -234,18 +234,12 @@ const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll <= 0) {
-        // In cima alla pagina - mostra sempre
+    if (currentScroll <= 50) {
+        // Solo quando sei QUASI in cima - mostra navbar
         navbar.style.transform = 'translateY(0)';
-        return;
-    }
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scroll in basso - nascondi navbar
-        navbar.style.transform = 'translateY(-100%)';
     } else {
-        // Scroll in alto - mostra navbar
-        navbar.style.transform = 'translateY(0)';
+        // Altrimenti - nascondi navbar
+        navbar.style.transform = 'translateY(-100%)';
     }
     
     lastScroll = currentScroll;
