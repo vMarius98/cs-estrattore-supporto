@@ -82,6 +82,26 @@ body {
     margin-top: -5px;
 }
 
+.logo-image {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6));
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 45px;
+    }
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
