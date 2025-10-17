@@ -57,8 +57,9 @@ body {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;  /* Cambiato da space-between a flex-start */
     align-items: center;
+    gap: 3rem;  /* Spazio tra logo e menu */
 }
 
 .logo {
@@ -121,6 +122,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin-left: auto;  /* Spinge il menu a destra */
 }
 
 .nav-link {
