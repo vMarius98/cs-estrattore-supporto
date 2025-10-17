@@ -55,11 +55,11 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 2rem 0 1rem;  /* Padding ridotto a sinistra */
     display: flex;
-    justify-content: flex-start;  /* MODIFICATO: era space-between */
+    justify-content: flex-start;
     align-items: center;
-    gap: 3rem;  /* AGGIUNTO: spazio tra logo e menu */
+    gap: 3rem;
 }
 
 .logo {
