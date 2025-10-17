@@ -140,12 +140,184 @@
                     <a href="mailto:csselezione03@gmail.com" class="contact-link">Invia Email</a>
                 </div>
                 
-                <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="contact-icon">🌐</div>
-                    <h3>Sito Web</h3>
-                    <p>www.consulenzaeselezione.com</p>
-                    <a href="https://www.consulenzaeselezione.com" target="_blank" class="contact-link">Visita</a>
+                <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuti nella guida - C&S Estrattore</title>
+    <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="C&S Logo" class="logo-image">
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#guide" class="nav-link">Guide</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contatti" class="nav-link">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="word">Centro</span>
+                <span class="word">Supporto</span>
+            </h1>
+            <p class="hero-subtitle fade-in">La tua guida completa per C&S Estrattore</p>
+            <button class="cta-button" onclick="scrollToSection('guide')">
+                Inizia Ora
+                <span class="arrow">→</span>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="guide" class="section">
+        <div class="container">
+            <h2 class="section-title">📚 Guide e Tutorial</h2>
+            <div class="cards-grid">
+                <div class="card" data-aos="fade-up">
+                    <div class="card-icon">🚀</div>
+                    <h3>Guida Rapida</h3>
+                    <p>Inizia ad usare il software in 5 minuti con la nostra guida step-by-step</p>
+                    <button class="card-button" onclick="openModal('quick-guide')">Scopri di più</button>
                 </div>
+                
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">📥</div>
+                    <h3>Importazione Dati</h3>
+                    <p>Come importare liste da file Excel, CSV e formati personalizzati</p>
+                    <button class="card-button" onclick="openModal('import-guide')">Scopri di più</button>
+                </div>
+                
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">🎲</div>
+                    <h3>Estrazione Casuale</h3>
+                    <p>Guida completa alle funzionalità avanzate di estrazione</p>
+                    <button class="card-button" onclick="openModal('extraction-guide')">Scopri di più</button>
+                </div>
+                
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">💾</div>
+                    <h3>Salvataggio Risultati</h3>
+                    <p>Esporta e condividi i tuoi risultati in diversi formati</p>
+                    <button class="card-button" onclick="openModal('export-guide')">Scopri di più</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <h2 class="section-title">❓ Domande Frequenti</h2>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-right">
+                    <div class="faq-question">
+                        <span>Come posso importare una lista da file Excel?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Utilizza il pulsante "Importa da File" nella barra superiore e seleziona il tuo file .xlsx o .csv. Il software riconoscerà automaticamente il formato e importerà i dati.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="faq-question">
+                        <span>È possibile salvare le estrazioni precedenti?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sì, tutte le estrazioni vengono salvate automaticamente nello storico accessibile premendo il tasto "Storico" in alto a destra.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="faq-question">
+                        <span>Qual è il limite di elementi per lista?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puoi inserire fino a 10.000 elementi per lista, garantendo prestazioni ottimali anche con grandi quantità di dati.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="faq-question">
+                        <span>Come funziona l'estrazione casuale?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Il software utilizza un algoritmo di randomizzazione certificato che garantisce un'estrazione completamente casuale e imparziale degli elementi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contatti" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">📞 Contattaci</h2>
+            <div class="contact-grid">
+                <div class="contact-card" data-aos="zoom-in">
+                <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>csselezione03@gmail.com</p>
+                    <a href="mailto:csselezione03@gmail.com" class="contact-link">Invia Email</a>
+                </div>
+                
+                <div class="contact-card" data-aos="zoom-in">
+    <div class="contact-icon">📧</div>
+    <h3>Email</h3>
+    <p>csselezione03@gmail.com</p>
+    <a href="mailto:csselezione03@gmail.com" class="contact-link">Invia Email</a>
+</div>
+                
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="contact-icon">⏰</div>
+                    <h3>Orari Supporto</h3>
+                    <p>Lun-Ven: 9:00 - 18:00</p>
+                    <span class="contact-link">Risposta in breve tempo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 C&S - Consulenza e Selezione. Tutti i diritti riservati.</p>
+        <p>Versione Software: 1.0.0</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js?v=8"></script>
+</body>
+</html>>
                 
                 <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="contact-icon">⏰</div>
