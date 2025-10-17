@@ -128,15 +128,15 @@ const modalContent = {
                 
                 <li><strong>Step 5: </strong> A questo punto vi apparirà una schermata con tutti numeri o lettere e basta premere SPAZIO(sulla tastiera) per avviare l'estrazione</li>
                 
-                <li><strong>Step 5: </strong> Una volta estratto il numero o la lettera cliccare sul pulsante "Ok" che si trovo sotto la lettera o numnero estratto e potete continuare con le estrazioni</li>
+                <li><strong>Step 6: </strong> Una volta estratto il numero o la lettera cliccare sul pulsante "Ok" che si trovo sotto la lettera o numnero estratto e potete continuare con le estrazioni</li>
                 
-                <li><strong>Step 6: </strong> Se dovete eseguire SOLO "1" (UNA ESTRAZIONE),e volete tornare al menu principale , basta cliccare sul simbolo "☰" e tornerete al menu principale</li>
+                <li><strong>Step 7: </strong> Se dovete eseguire SOLO "1" (UNA ESTRAZIONE),e volete tornare al menu principale , basta cliccare sul simbolo "☰" e tornerete al menu principale</li>
                 
-                <li><strong>Step 7: </strong> Una volta tornati al menu principale vi basterà cliccare il tasto "Pulisci" ed il programma in modo automatico sarà pronto per una nuova estrazione</li>
+                <li><strong>Step 8: </strong> Una volta tornati al menu principale vi basterà cliccare il tasto "Pulisci" ed il programma in modo automatico sarà pronto per una nuova estrazione</li>
                 
-                <li><strong>Step 8: </strong> Per vedere lo storico delle estrazioni vi basterà andare nella sezione "Storico Estrazioni" e potrete visualizzare i risultati</li>
+                <li><strong>Step 9: </strong> Per vedere lo storico delle estrazioni vi basterà andare nella sezione "Storico Estrazioni" e potrete visualizzare i risultati</li>
                 
-                <li><strong>Step 9: </strong> ⚠️ ATTENZIONE!! Se andate nella sezione Storico e cliccate sul pulsante "Pulisci Storico" NON avrete più la posibilità di vedere i risultati delle estrazioni precedenti</li>
+                <li><strong>Step 10: </strong> ⚠️ ATTENZIONE!! Se andate nella sezione Storico e cliccate sul pulsante "Pulisci Storico" NON avrete più la posibilità di vedere i risultati delle estrazioni precedenti</li>
                 
             </ol>
 
