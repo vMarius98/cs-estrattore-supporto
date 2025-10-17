@@ -129,7 +129,8 @@ const modalContent = {
                 <li><strong>Step 5:</strong> Per vedere lo storico delle estrazioni vi basterà andare nella sezione "Storico Estrazioni" e potrete visualizzare i risultati</li>
                 <li><strong>Step 5:</strong> ATTENZIONE!! Se andate nella sezione Storico e cliccate sul pulsante "Pulisci Storico" NON avrete più la posibilità di vedere i risultati delle estrazioni precedenti</li>
             </ol>
-            <p>È davvero così semplice! Per funzionalità avanzate, consulta le altre guide.</p>
+
+            <p>Per ulteriori informazioni o chiarimenti, non esitare a contattarci!</p>
         `
     },
     'import-guide': {
