@@ -83,16 +83,36 @@ body {
 }
 
 .logo-image {
-    height: 60px;
+    height: 80px;  /* Aumentato da 60px a 80px */
     width: auto;
-    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6));
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.7));
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .logo-image:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8));
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 25px rgba(0, 212, 255, 0.9));
+}
+
+/* Responsive per tablet */
+@media (max-width: 1024px) {
+    .logo-image {
+        height: 70px;
+    }
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 50px;
+    }
 }
 
 /* Responsive per mobile */
