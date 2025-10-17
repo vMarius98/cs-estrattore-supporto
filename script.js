@@ -120,9 +120,14 @@ const modalContent = {
             <ol>
                 <li><strong>Step 1:</strong> Apri l'applicazione C&S Estrattore</li>
                 <li><strong>Step 2:</strong> Inserisci i tuoi numeri e lettere nelle apposite sezioni</li>
-                <li><strong>Step 3:</strong> Clicca su "Aggiungi" per ogni elemento</li>
-                <li><strong>Step 4:</strong> Premi "AVVIA ESTRAZIONE" per generare l'estrazione casuale</li>
-                <li><strong>Step 5:</strong> Visualizza i risultati e salvali se necessario</li>
+                <li><strong>Step 3:</strong> Clicca su "Aggiungi" e nella sezione "Lista Opzioni" vedrai i numeri o le lettere che hai aggiunto</li>
+                <li><strong>Step 4:</strong> Premi "Prepara" e poi "AVVIA ESTRAZIONE" per avviare l'estrazione casuale</li>
+                <li><strong>Step 4:</strong> A questo punto vi apparirà una schermata con tutti numeri o lettere e basta premere SPAZIO(sulla tastiera) per avviare l'estrazione</li>
+                <li><strong>Step 5:</strong> Una volta estratto il numero o la lettera cliccare sul pulsante "Ok" che si trovo sotto la lettera o numnero estratto e potete continuare con le estrazioni</li>
+                <li><strong>Step 5:</strong> Se dovete eseguire SOLO "1" (UNA ESTRAZIONE),e volete tornare al menu principale , basta cliccare sul simbolo "☰" e tornerete al menu principale</li>
+                <li><strong>Step 5:</strong> Una volta tornati al menu principale vi basterà cliccare il tasto "Pulisci" ed il programma in modo automatico sarà pronto per una nuova estrazione</li>
+                <li><strong>Step 5:</strong> Per vedere lo storico delle estrazioni vi basterà andare nella sezione "Storico Estrazioni" e potrete visualizzare i risultati</li>
+                <li><strong>Step 5:</strong> ATTENZIONE!! Se andate nella sezione Storico e cliccate sul pulsante "Pulisci Storico" NON avrete più la posibilità di vedere i risultati delle estrazioni precedenti</li>
             </ol>
             <p>È davvero così semplice! Per funzionalità avanzate, consulta le altre guide.</p>
         `
@@ -244,4 +249,3 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
-
