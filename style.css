@@ -45,7 +45,7 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease, transform 0.3s ease;  /* AGGIUNTO transform */
+    transition: all 0.3s ease, transform 0.3s ease;
 }
 
 .navbar.scrolled {
@@ -53,8 +53,8 @@ body {
 }
 
 .nav-container {
-    max-width: 100%;  /* MODIFICATO: da 1200px a 100% */
-    margin: 0;        /* MODIFICATO: da "0 auto" a "0" */
+    max-width: 100%;
+    margin: 0;
     padding: 0 2rem 0 1rem;
     display: flex;
     justify-content: flex-start;
@@ -121,7 +121,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
-    margin-left: auto;  /* AGGIUNTO: spinge il menu a destra */
+    margin-left: auto;
 }
 
 .nav-link {
