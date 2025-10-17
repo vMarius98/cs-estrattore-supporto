@@ -121,7 +121,7 @@ const modalContent = {
                 <li><strong>Step 1:</strong> Apri l'applicazione C&S Estrattore</li>
                 <li><strong>Step 2:</strong> Inserisci i tuoi numeri e lettere nelle apposite sezioni</li>
                 <li><strong>Step 3:</strong> Clicca su "Aggiungi" e nella sezione "Lista Opzioni" vedrai i numeri o le lettere che hai aggiunto</li>
-                <li><strong>Step 4:</strong> Premi "Prepara" e poi "AVVIA ESTRAZIONE" per avviare l'estrazione casuale</li>
+                <li><strong>Step 4:</strong> Premi "Prepara" per avviare l'estrazione casuale</li>
                 <li><strong>Step 4:</strong> A questo punto vi apparirà una schermata con tutti numeri o lettere e basta premere SPAZIO(sulla tastiera) per avviare l'estrazione</li>
                 <li><strong>Step 5:</strong> Una volta estratto il numero o la lettera cliccare sul pulsante "Ok" che si trovo sotto la lettera o numnero estratto e potete continuare con le estrazioni</li>
                 <li><strong>Step 5:</strong> Se dovete eseguire SOLO "1" (UNA ESTRAZIONE),e volete tornare al menu principale , basta cliccare sul simbolo "☰" e tornerete al menu principale</li>
