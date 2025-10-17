@@ -53,9 +53,9 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem 0 1rem;  /* Padding ridotto a sinistra */
+    max-width: 100%;  /* MODIFICATO: da 1200px a 100% */
+    margin: 0;        /* MODIFICATO: da "0 auto" a "0" */
+    padding: 0 2rem 0 1rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
