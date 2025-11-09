@@ -7,7 +7,7 @@ AOS.init({
     once: true,
     offset: 100,
     easing: 'ease-out-cubic'
-    // La riga "disable: 'mobile'" è stata rimossa!
+    // Rimosso 'disable: mobile' per mostrare le card su mobile
 });
 
 // ============================================
@@ -20,7 +20,14 @@ window.addEventListener('load', () => {
     
     setTimeout(() => {
         loader.classList.add('hidden');
-        splineIframe.style.opacity = '1';
+        
+        // NASCONDI SPLINE SU MOBILE (migliora performance)
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+            splineIframe.style.opacity = '1';
+        } else {
+            splineIframe.style.display = 'none';
+        }
     }, 2000);
 });
 
