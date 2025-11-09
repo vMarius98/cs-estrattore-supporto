@@ -6,7 +6,8 @@ AOS.init({
     duration: 1000,
     once: true,
     offset: 100,
-    easing: 'ease-out-cubic'
+    easing: 'ease-out-cubic',
+    disable: 'mobile' // Disabilita AOS su mobile per migliorare performance
 });
 
 // ============================================
@@ -42,7 +43,7 @@ window.addEventListener('scroll', () => {
     }
     
     lastScroll = currentScroll;
-});
+}, { passive: true }); // Passive per migliorare performance scroll
 
 // ============================================
 // MOBILE MENU TOGGLE
@@ -115,7 +116,7 @@ document.querySelectorAll('.faq-question').forEach(question => {
 });
 
 // ============================================
-// MODAL FUNCTIONALITY - CON SEDI
+// MODAL FUNCTIONALITY - FIX SCROLL MOBILE
 // ============================================
 
 const modal = document.getElementById('modal');
@@ -230,13 +231,27 @@ function openModal(guideType) {
             ${content.content}
         `;
         modal.classList.add('show');
-        document.body.classList.add('no-scroll');
+        document.body.classList.add('modal-open'); // Blocca scroll body
+        
+        // Previeni scroll del body su mobile
+        if (window.innerWidth <= 768) {
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+            document.body.style.overflow = 'hidden';
+        }
     }
 }
 
 function closeModalFunc() {
     modal.classList.remove('show');
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove('modal-open');
+    
+    // Ripristina scroll del body su mobile
+    if (window.innerWidth <= 768) {
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+    }
 }
 
 if (modalClose) {
@@ -252,6 +267,14 @@ document.addEventListener('keydown', (e) => {
         closeModalFunc();
     }
 });
+
+// Previeni scroll body quando scroll modal su mobile
+const modalContentEl = document.querySelector('.modal-content');
+if (modalContentEl) {
+    modalContentEl.addEventListener('touchmove', (e) => {
+        e.stopPropagation();
+    }, { passive: true });
+}
 
 // ============================================
 // EMAIL OPTIONS
@@ -321,30 +344,37 @@ document.querySelectorAll('.card, .faq-item, .contact-card').forEach(el => {
 });
 
 // ============================================
-// PARALLAX EFFECT FOR HERO
+// PARALLAX EFFECT - SOLO DESKTOP
 // ============================================
 
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / 700);
-    }
-});
+// Disabilita parallax su mobile per evitare lag
+const isMobile = window.innerWidth <= 768;
+
+if (!isMobile) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroContent = document.querySelector('.hero-content');
+        
+        if (heroContent && scrolled < window.innerHeight) {
+            heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+            heroContent.style.opacity = 1 - (scrolled / 700);
+        }
+    }, { passive: true });
+}
 
 // ============================================
-// CURSOR GLOW EFFECT
+// CURSOR GLOW EFFECT - SOLO DESKTOP
 // ============================================
 
-const cursorGlow = document.createElement('div');
-cursorGlow.classList.add('cursor-glow');
-document.body.appendChild(cursorGlow);
+if (!isMobile) {
+    const cursorGlow = document.createElement('div');
+    cursorGlow.classList.add('cursor-glow');
+    document.body.appendChild(cursorGlow);
 
-document.addEventListener('mousemove', (e) => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-});
+    document.addEventListener('mousemove', (e) => {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+    });
+}
 
 console.log('🚀 C&S Estrattore - Website loaded successfully!');
