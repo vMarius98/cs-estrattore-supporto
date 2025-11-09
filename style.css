@@ -146,6 +146,58 @@ body {
 }
 
 /* ============================================
+   BADGE PERSONALIZZATO C&S - STATICO
+   ============================================ */
+
+.custom-spline-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+.custom-spline-badge a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(0, 212, 255, 0.15);
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    border-radius: 50px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+}
+
+.custom-spline-badge a:hover {
+    background: rgba(0, 212, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+}
+
+.custom-spline-badge svg {
+    color: var(--primary);
+}
+
+/* Nascondi watermark Spline */
+.spline-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(to top, rgba(5, 13, 21, 1) 0%, transparent 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* ============================================
    SISTEMA POINTER-EVENTS
    ============================================ */
 
@@ -173,7 +225,8 @@ body {
 .modal,
 .modal-close,
 .logo-image,
-.menu-toggle {
+.menu-toggle,
+.custom-spline-badge a {
     pointer-events: auto;
     cursor: pointer;
 }
@@ -184,7 +237,7 @@ h1, h2, h3, h4, h5, h6, p, span, li {
 }
 
 /* ============================================
-   NAVBAR - SCOMPARE SCROLLANDO
+   NAVBAR
    ============================================ */
 
 .navbar {
@@ -253,10 +306,6 @@ body.scrolled .navbar {
     padding: 10px 0;
     transition: var(--transition);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.nav-link::before {
-    display: none;
 }
 
 .nav-link:hover,
@@ -369,10 +418,6 @@ body.scrolled .hero-badge {
     position: relative;
     display: block;
     text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
-}
-
-.gradient-text::after {
-    display: none;
 }
 
 .hero-subtitle {
@@ -512,10 +557,6 @@ body.scrolled .hero-badge {
     background: rgba(0, 212, 255, 0.3);
 }
 
-.scroll-indicator {
-    display: none !important;
-}
-
 /* ============================================
    SECTIONS
    ============================================ */
@@ -570,7 +611,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   CARDS GRID - ANIMAZIONI MIGLIORATE
+   CARDS GRID
    ============================================ */
 
 .cards-grid {
@@ -709,7 +750,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   FAQ SECTION - ANIMAZIONI SMOOTH
+   FAQ SECTION
    ============================================ */
 
 .faq-container {
@@ -805,13 +846,27 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   CONTACT SECTION
+   CONTACT SECTION - 4 CARDS
    ============================================ */
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+}
+
+/* Desktop 4 colonne */
+@media (min-width: 1200px) {
+    .contact-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet 2 colonne */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .contact-card {
@@ -980,7 +1035,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   MODAL
+   MODAL - CON STILI PER SEDI
    ============================================ */
 
 .modal {
@@ -1105,8 +1160,69 @@ body.scrolled .hero-badge {
     font-weight: 600;
 }
 
+/* STILI PER MODAL SEDI */
+.location-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.location-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 16px;
+    transition: var(--transition);
+}
+
+.location-item:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateX(10px);
+}
+
+.location-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.location-details h4 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.location-details p {
+    font-size: 1rem;
+    color: var(--light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.location-footer {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 212, 255, 0.2);
+    text-align: center;
+}
+
+.location-footer p {
+    color: var(--gray);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.location-footer strong {
+    color: var(--primary);
+}
+
 /* ============================================
-   FOOTER - TRASPARENTE E MIGLIORATO
+   FOOTER
    ============================================ */
 
 .footer {
@@ -1167,16 +1283,12 @@ body.scrolled .hero-badge {
 }
 
 @keyframes glow {
-    0%, 100% {
-        filter: brightness(1);
-    }
-    50% {
-        filter: brightness(1.3);
-    }
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
 }
 
 /* ============================================
-   RESPONSIVE - MOBILE OTTIMIZZATO
+   RESPONSIVE
    ============================================ */
 
 @media (max-width: 1024px) {
@@ -1198,6 +1310,16 @@ body.scrolled .hero-badge {
 
     .section {
         padding: 80px 30px;
+    }
+
+    .custom-spline-badge {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .custom-spline-badge a {
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }
 
@@ -1318,6 +1440,12 @@ body.scrolled .hero-badge {
         font-size: 1.8rem;
     }
 
+    .location-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -1326,6 +1454,47 @@ body.scrolled .hero-badge {
     .footer-logo,
     .footer-text {
         text-align: center;
+    }
+
+    .custom-spline-badge {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .custom-spline-badge a {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .spline-container::after {
+        width: 150px;
+        height: 50px;
+    }
+
+    /* Disabilita Spline touch su mobile */
+    .spline-container {
+        pointer-events: none !important;
+        touch-action: pan-y !important;
+    }
+    
+    #spline-background {
+        pointer-events: none !important;
+        touch-action: pan-y !important;
+    }
+    
+    .spline-container iframe {
+        pointer-events: none !important;
+    }
+
+    body {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y pinch-zoom;
+    }
+    
+    html {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -1389,21 +1558,33 @@ body.scrolled .hero-badge {
     .faq-item.active .faq-answer {
         padding: 0 20px 20px;
     }
-}
 
-@media (max-height: 600px) and (orientation: landscape) {
-    .hero {
-        min-height: auto;
-        padding: 100px 20px 60px;
+    .custom-spline-badge {
+        bottom: 10px;
+        right: 10px;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .custom-spline-badge a {
+        padding: 6px 12px;
+        font-size: 11px;
+        gap: 6px;
     }
 
-    .hero-stats {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .custom-spline-badge svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .location-icon {
+        font-size: 2rem;
+    }
+
+    .location-details h4 {
+        font-size: 1.1rem;
+    }
+
+    .location-details p {
+        font-size: 0.9rem;
     }
 }
 
@@ -1432,4 +1613,10 @@ body.scrolled .hero-badge {
     transform: translate(-50%, -50%);
     z-index: 9998;
     transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .cursor-glow {
+        display: none;
+    }
 }
