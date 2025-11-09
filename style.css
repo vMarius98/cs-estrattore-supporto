@@ -146,7 +146,7 @@ body {
 }
 
 /* ============================================
-   BADGE PERSONALIZZATO C&S - STATICO
+   BADGE PERSONALIZZATO C&S
    ============================================ */
 
 .custom-spline-badge {
@@ -184,7 +184,6 @@ body {
     color: var(--primary);
 }
 
-/* Nascondi watermark Spline */
 .spline-container::after {
     content: '';
     position: absolute;
@@ -198,7 +197,7 @@ body {
 }
 
 /* ============================================
-   SISTEMA POINTER-EVENTS
+   POINTER EVENTS
    ============================================ */
 
 .navbar,
@@ -349,7 +348,7 @@ body.scrolled .navbar {
 }
 
 /* ============================================
-   HERO SECTION
+   HERO
    ============================================ */
 
 .hero {
@@ -611,7 +610,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   CARDS GRID
+   CARDS
    ============================================ */
 
 .cards-grid {
@@ -630,21 +629,6 @@ body.scrolled .hero-badge {
     backdrop-filter: blur(20px);
     transition: var(--transition);
     overflow: hidden;
-}
-
-.card-animated {
-    transform: translateY(50px) scale(0.9);
-    opacity: 0;
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.card-animated.aos-animate {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-}
-
-.card-animated:hover {
-    transform: translateY(-15px) scale(1.05) !important;
 }
 
 .card::before {
@@ -750,7 +734,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   FAQ SECTION
+   FAQ
    ============================================ */
 
 .faq-container {
@@ -846,7 +830,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   CONTACT SECTION - 4 CARDS
+   CONTACT CARDS
    ============================================ */
 
 .contact-grid {
@@ -855,14 +839,12 @@ body.scrolled .hero-badge {
     gap: 30px;
 }
 
-/* Desktop 4 colonne */
 @media (min-width: 1200px) {
     .contact-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-/* Tablet 2 colonne */
 @media (max-width: 1199px) and (min-width: 769px) {
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -976,7 +958,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   EMAIL OPTIONS MENU
+   EMAIL OPTIONS
    ============================================ */
 
 .email-options {
@@ -1035,7 +1017,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   MODAL - CON STILI PER SEDI
+   MODAL
    ============================================ */
 
 .modal {
@@ -1160,7 +1142,6 @@ body.scrolled .hero-badge {
     font-weight: 600;
 }
 
-/* STILI PER MODAL SEDI */
 .location-list {
     display: flex;
     flex-direction: column;
@@ -1311,16 +1292,6 @@ body.scrolled .hero-badge {
     .section {
         padding: 80px 30px;
     }
-
-    .custom-spline-badge {
-        bottom: 15px;
-        right: 15px;
-    }
-
-    .custom-spline-badge a {
-        padding: 8px 16px;
-        font-size: 13px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1387,11 +1358,6 @@ body.scrolled .hero-badge {
 
     .hero-title {
         font-size: 3rem;
-        letter-spacing: -1px;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
     }
 
     .hero-buttons {
@@ -1417,10 +1383,6 @@ body.scrolled .hero-badge {
 
     .section {
         padding: 60px 20px;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
     }
 
     .cards-grid {
@@ -1450,96 +1412,15 @@ body.scrolled .hero-badge {
         flex-direction: column;
         text-align: center;
     }
-
-    .footer-logo,
-    .footer-text {
-        text-align: center;
-    }
-
-    .custom-spline-badge {
-        bottom: 15px;
-        right: 15px;
-    }
-
-    .custom-spline-badge a {
-        padding: 8px 15px;
-        font-size: 12px;
-    }
-
-    .spline-container::after {
-        width: 150px;
-        height: 50px;
-    }
-
-    /* Disabilita Spline touch su mobile */
-    .spline-container {
-        pointer-events: none !important;
-        touch-action: pan-y !important;
-    }
-    
-    #spline-background {
-        pointer-events: none !important;
-        touch-action: pan-y !important;
-    }
-    
-    .spline-container iframe {
-        pointer-events: none !important;
-    }
-
-    body {
-        overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-y pinch-zoom;
-    }
-    
-    html {
-        overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch;
-    }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        padding: 20px 0;
-    }
-
-    .logo-image {
-        height: 45px;
-    }
-
-    .hero {
-        padding: 100px 15px 60px;
-    }
-
-    .hero-badge {
-        font-size: 13px;
-        padding: 10px 20px;
-    }
-
     .hero-title {
         font-size: 2.2rem;
-        letter-spacing: 0;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 15px 35px;
-        font-size: 15px;
-    }
-
-    .hero-stats {
-        padding: 25px 20px;
     }
 
     .stat-number {
         font-size: 2rem;
-    }
-
-    .stat-label {
-        font-size: 13px;
     }
 
     .card {
@@ -1550,46 +1431,10 @@ body.scrolled .hero-badge {
         padding: 20px;
         font-size: 1rem;
     }
-
-    .faq-answer {
-        padding: 0 20px;
-    }
-
-    .faq-item.active .faq-answer {
-        padding: 0 20px 20px;
-    }
-
-    .custom-spline-badge {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .custom-spline-badge a {
-        padding: 6px 12px;
-        font-size: 11px;
-        gap: 6px;
-    }
-
-    .custom-spline-badge svg {
-        width: 16px;
-        height: 16px;
-    }
-
-    .location-icon {
-        font-size: 2rem;
-    }
-
-    .location-details h4 {
-        font-size: 1.1rem;
-    }
-
-    .location-details p {
-        font-size: 0.9rem;
-    }
 }
 
 /* ============================================
-   UTILITY CLASSES
+   UTILITY
    ============================================ */
 
 .hidden {
@@ -1601,7 +1446,7 @@ body.scrolled .hero-badge {
 }
 
 /* ============================================
-   CURSOR GLOW EFFECT
+   CURSOR GLOW
    ============================================ */
 
 .cursor-glow {
@@ -1620,3 +1465,5 @@ body.scrolled .hero-badge {
         display: none;
     }
 }
+
+
