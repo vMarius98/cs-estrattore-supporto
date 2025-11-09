@@ -2,7 +2,6 @@
 // INITIALIZE
 // ============================================
 
-// Initialize AOS (Animate On Scroll)
 AOS.init({
     duration: 1000,
     once: true,
@@ -18,7 +17,6 @@ window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     const splineIframe = document.getElementById('spline-background');
     
-    // Wait for Spline to load
     setTimeout(() => {
         loader.classList.add('hidden');
         splineIframe.style.opacity = '1';
@@ -35,7 +33,6 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Add scrolled class to navbar and body
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
         document.body.classList.add('scrolled');
@@ -72,18 +69,15 @@ document.querySelectorAll('.nav-link').forEach(link => {
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
         
-        // Update active link
         document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
         this.classList.add('active');
         
-        // Close mobile menu if open
         if (navMenu.classList.contains('active')) {
             menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
             document.body.classList.remove('no-scroll');
         }
         
-        // Smooth scroll
         targetSection.scrollIntoView({ 
             behavior: 'smooth',
             block: 'start'
@@ -91,7 +85,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Scroll to section function
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -111,12 +104,10 @@ document.querySelectorAll('.faq-question').forEach(question => {
         const faqItem = question.parentElement;
         const wasActive = faqItem.classList.contains('active');
         
-        // Close all FAQ items
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
         });
         
-        // Open clicked item if it wasn't active
         if (!wasActive) {
             faqItem.classList.add('active');
         }
@@ -124,7 +115,7 @@ document.querySelectorAll('.faq-question').forEach(question => {
 });
 
 // ============================================
-// MODAL FUNCTIONALITY
+// MODAL FUNCTIONALITY - CON SEDI
 // ============================================
 
 const modal = document.getElementById('modal');
@@ -138,16 +129,12 @@ const modalContent = {
         content: `
             <h3>Inizia in 5 Minuti</h3>
             <ol>
-                <li><strong>Step 1:</strong> Apri l'applicazione C&S Estrattore</li>
-                <li><strong>Step 2:</strong> Inserisci i tuoi numeri e lettere nelle apposite sezioni</li>
-                <li><strong>Step 3:</strong> Clicca su "Aggiungi" e nella sezione "Lista Opzioni" vedrai i numeri o le lettere che hai aggiunto</li>
-                <li><strong>Step 4:</strong> Premi "Prepara" per avviare l'estrazione casuale</li>
-                <li><strong>Step 5:</strong> A questo punto vi apparirà una schermata con tutti numeri o lettere e basta premere SPAZIO (sulla tastiera) per avviare l'estrazione</li>
-                <li><strong>Step 6:</strong> Una volta estratto il numero o la lettera cliccare sul pulsante "Ok" che si trova sotto la lettera o numero estratto e potete continuare con le estrazioni</li>
-                <li><strong>Step 7:</strong> Se dovete eseguire SOLO "1" (UNA ESTRAZIONE), e volete tornare al menu principale, basta cliccare sul simbolo "☰" e tornerete al menu principale</li>
-                <li><strong>Step 8:</strong> Una volta tornati al menu principale vi basterà cliccare il tasto "Pulisci" ed il programma in modo automatico sarà pronto per una nuova estrazione</li>
-                <li><strong>Step 9:</strong> Per vedere lo storico delle estrazioni vi basterà andare nella sezione "Storico Estrazioni" e potrete visualizzare i risultati</li>
-                <li><strong>Step 10:</strong> ⚠️ ATTENZIONE!! Se andate nella sezione Storico e cliccate sul pulsante "Pulisci Storico" NON avrete più la possibilità di vedere i risultati delle estrazioni precedenti</li>
+                <li><strong>Avvio dell'applicazione:</strong> Apri C&S Estrattore sul tuo dispositivo per iniziare.</li>
+                <li><strong>Inserimento dei dati:</strong> Inserisci i numeri o le lettere che desideri utilizzare nelle apposite sezioni dedicate.</li>
+                <li><strong>Conferma degli elementi:</strong> Clicca sul pulsante "Aggiungi" per confermare. Gli elementi inseriti appariranno nella sezione "Lista Opzioni".</li>
+                <li><strong>Preparazione dell'estrazione:</strong> Premi il pulsante "Prepara" per avviare il processo di estrazione casuale.</li>
+                <li><strong>Avvio dell'estrazione:</strong> Verrà visualizzata una schermata con tutti gli elementi inseriti. Premi il tasto SPAZIO sulla tastiera per avviare l'estrazione.</li>
+                <li><strong>Proseguimento:</strong> Una volta estratto l'elemento, clicca sul pulsante "Prossima Estrazione" per continuare con ulteriori estrazioni.</li>
             </ol>
             <p>⁉️ Per ulteriori informazioni o chiarimenti, non esitare a contattarci!</p>
         `
@@ -155,14 +142,16 @@ const modalContent = {
     'import-guide': {
         title: '📥 Importazione Dati',
         content: `
-            <h3>Come Importare Liste</h3>
-            <p>Puoi importare liste da diversi formati:</p>
-            <ul>
-                <li><strong>Excel (.xlsx):</strong> Seleziona il file e scegli la colonna da importare</li>
-                <li><strong>CSV (.csv):</strong> Il software rileverà automaticamente il delimitatore</li>
-                <li><strong>File di testo (.txt):</strong> Un elemento per riga</li>
-            </ul>
-            <p><strong>Suggerimento:</strong> Assicurati che i dati siano puliti e senza spazi extra.</p>
+            <h3>Come Importare Sessioni Salvate</h3>
+            <p>Il sistema di importazione ti permette di recuperare e continuare sessioni precedentemente salvate:</p>
+            <ol>
+                <li><strong>Accesso all'importazione:</strong> Clicca sul pulsante "Importa Storico" presente nell'interfaccia principale.</li>
+                <li><strong>Autenticazione:</strong> Inserisci la password che hai impostato all'inizio dell'utilizzo del software.</li>
+                <li><strong>Selezione della sessione:</strong> Nella colonna di sinistra appariranno tutte le sessioni salvate. Clicca sulla sessione che desideri recuperare.</li>
+                <li><strong>Caricamento dei dati:</strong> Il sistema caricherà automaticamente tutti gli elementi (lettere o numeri) ancora non estratti dalla sessione selezionata.</li>
+                <li><strong>Avvio dell'estrazione:</strong> Clicca su "Prepara" e premi SPAZIO sulla tastiera per continuare con le estrazioni.</li>
+            </ol>
+            <p><strong>Nota importante:</strong> Assicurati di ricordare la password impostata, poiché è necessaria per accedere a tutte le funzionalità di importazione ed esportazione.</p>
         `
     },
     'extraction-guide': {
@@ -171,26 +160,64 @@ const modalContent = {
             <h3>Funzionalità Avanzate</h3>
             <p>L'algoritmo di estrazione utilizza tecniche certificate per garantire:</p>
             <ul>
-                <li>Randomizzazione completamente casuale</li>
-                <li>Nessuna ripetizione degli elementi estratti</li>
-                <li>Velocità di elaborazione ottimale anche con grandi dataset</li>
-                <li>Tracciabilità completa nello storico</li>
+                <li><strong>Randomizzazione certificata:</strong> Sistema completamente casuale e imparziale</li>
+                <li><strong>Nessuna ripetizione:</strong> Gli elementi estratti vengono automaticamente esclusi dalle estrazioni successive</li>
+                <li><strong>Velocità ottimale:</strong> Elaborazione istantanea anche con dataset di grandi dimensioni</li>
+                <li><strong>Tracciabilità completa:</strong> Ogni estrazione viene registrata nello storico con data e ora</li>
             </ul>
-            <p>Ogni estrazione è registrata con data, ora e risultati completi.</p>
+            <p><strong>Affidabilità:</strong> Il sistema garantisce l'integrità di ogni estrazione, rendendola ideale per processi di selezione ufficiali.</p>
         `
     },
     'export-guide': {
-        title: '💾 Salvataggio Risultati',
+        title: '💾 Esportazione Risultati',
         content: `
-            <h3>Esportazione e Condivisione</h3>
-            <p>Dopo l'estrazione, puoi:</p>
-            <ul>
-                <li>Esportare i risultati in formato Excel</li>
-                <li>Salvare in formato PDF per stampa o condivisione</li>
-                <li>Copiare negli appunti per uso immediato</li>
-                <li>Visualizzare lo storico completo delle estrazioni passate</li>
-            </ul>
-            <p><strong>Nota:</strong> Tutti i dati sono salvati localmente sul tuo computer.</p>
+            <h3>Come Esportare i Dati</h3>
+            <p>Il sistema di esportazione ti permette di salvare i risultati delle tue sessioni in formato PDF:</p>
+            <ol>
+                <li><strong>Accesso all'esportazione:</strong> Clicca sul pulsante "Esporta Storico PDF" dall'interfaccia principale.</li>
+                <li><strong>Autenticazione:</strong> Il software ti chiederà di inserire la password impostata all'inizio.</li>
+                <li><strong>Selezione della sessione:</strong> Scegli la sessione che desideri esportare dalla lista disponibile (sessione in corso o sessioni passate).</li>
+                <li><strong>Scelta della destinazione:</strong> Seleziona la cartella di destinazione sul tuo computer dove salvare il file.</li>
+                <li><strong>Nome del file:</strong> Assegna un nome personalizzato al file PDF che verrà generato.</li>
+                <li><strong>Salvataggio:</strong> Il sistema genererà automaticamente un documento PDF completo con tutti i dettagli dell'estrazione.</li>
+            </ol>
+            <p><strong>Formato del documento:</strong> Il PDF esportato include data, ora, elementi estratti e ordine di estrazione per una documentazione completa e professionale.</p>
+        `
+    },
+    'location-info': {
+        title: '📍 Le Nostre Sedi',
+        content: `
+            <h3>Dove Trovarci</h3>
+            <div class="location-list">
+                <div class="location-item">
+                    <div class="location-icon">📍</div>
+                    <div class="location-details">
+                        <h4>Sede Legale</h4>
+                        <p>Via Michele Migliarini n. 51/A - 00173 Roma</p>
+                    </div>
+                </div>
+                
+                <div class="location-item">
+                    <div class="location-icon">🏢</div>
+                    <div class="location-details">
+                        <h4>Sede Operativa Roma</h4>
+                        <p>Via Tuscolana n. 1890/B - 00173</p>
+                    </div>
+                </div>
+                
+                <div class="location-item">
+                    <div class="location-icon">🏙️</div>
+                    <div class="location-details">
+                        <h4>Sede Operativa Milano</h4>
+                        <p>Corso Italia, 22 - 20122</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="location-footer">
+                <p><strong>Orari di apertura:</strong> Lun-Ven 9:00-18:00</p>
+                <p>Per appuntamenti o informazioni, contattaci via email o telefono.</p>
+            </div>
         `
     }
 };
@@ -220,7 +247,6 @@ if (modalOverlay) {
     modalOverlay.addEventListener('click', closeModalFunc);
 }
 
-// Close modal with ESC key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('show')) {
         closeModalFunc();
@@ -228,38 +254,49 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================================
-// CARDS HOVER EFFECT
+// EMAIL OPTIONS
 // ============================================
 
-document.querySelectorAll('.card-interactive').forEach(card => {
-    card.addEventListener('mouseenter', function(e) {
-        const glow = this.querySelector('.card-glow');
-        if (glow) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 212, 255, 0.2) 0%, transparent 50%)`;
-        }
-    });
+function showEmailOptions() {
+    const emailOptions = document.getElementById('emailOptions');
+    if (emailOptions.style.display === 'none' || emailOptions.style.display === '') {
+        emailOptions.style.display = 'flex';
+    } else {
+        emailOptions.style.display = 'none';
+    }
+}
+
+function copyEmail(event) {
+    event.stopPropagation();
+    const email = 'csselezione03@gmail.com';
     
-    card.addEventListener('mousemove', function(e) {
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+    navigator.clipboard.writeText(email).then(() => {
+        const btn = event.target.closest('.copy-email');
+        const originalText = btn.textContent;
+        btn.textContent = '✅ Email Copiata!';
+        btn.classList.add('copied');
         
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-        
-        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Errore nella copia:', err);
+        alert('Email: csselezione03@gmail.com');
     });
+}
+
+document.addEventListener('click', (e) => {
+    const emailOptions = document.getElementById('emailOptions');
+    const emailButton = e.target.closest('button[onclick*="showEmailOptions"]');
+    const emailMenu = e.target.closest('.email-options');
     
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
+    if (emailOptions && 
+        emailOptions.style.display === 'flex' && 
+        !emailButton && 
+        !emailMenu) {
+        emailOptions.style.display = 'none';
+    }
 });
 
 // ============================================
@@ -284,24 +321,6 @@ document.querySelectorAll('.card, .faq-item, .contact-card').forEach(el => {
 });
 
 // ============================================
-// SMOOTH REVEAL ON SCROLL
-// ============================================
-
-window.addEventListener('scroll', () => {
-    const reveals = document.querySelectorAll('.section-header, .hero-content');
-    
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
-        }
-    });
-});
-
-// ============================================
 // PARALLAX EFFECT FOR HERO
 // ============================================
 
@@ -312,50 +331,6 @@ window.addEventListener('scroll', () => {
     if (heroContent && scrolled < window.innerHeight) {
         heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
         heroContent.style.opacity = 1 - (scrolled / 700);
-    }
-});
-
-// ============================================
-// EMAIL OPTIONS
-// ============================================
-
-function showEmailOptions() {
-    const emailOptions = document.getElementById('emailOptions');
-    if (emailOptions.style.display === 'none' || emailOptions.style.display === '') {
-        emailOptions.style.display = 'flex';
-    } else {
-        emailOptions.style.display = 'none';
-    }
-}
-
-function copyEmail(event) {
-    event.stopPropagation();
-    const email = 'segreteria@ciesseselezione.it';
-    
-    navigator.clipboard.writeText(email).then(() => {
-        const btn = event.target.closest('.copy-email');
-        const originalText = btn.textContent;
-        btn.textContent = '✅ Email Copiata!';
-        btn.classList.add('copied');
-        
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Errore nella copia:', err);
-        alert('Email: segreteria@ciesseselezione.it');
-    });
-}
-
-// Chiudi menu email se clicchi fuori
-document.addEventListener('click', (e) => {
-    const emailOptions = document.getElementById('emailOptions');
-    const contactCard = e.target.closest('.contact-card');
-    const emailButton = e.target.closest('button[onclick*="showEmailOptions"]');
-    
-    if (!contactCard && !emailButton && emailOptions && emailOptions.style.display === 'flex') {
-        emailOptions.style.display = 'none';
     }
 });
 
@@ -372,4 +347,4 @@ document.addEventListener('mousemove', (e) => {
     cursorGlow.style.top = e.clientY + 'px';
 });
 
-console.log('🚀 C&S Estrattore - Sito Web caricato con successo!');
+console.log('🚀 C&S Estrattore - Website loaded successfully!');
