@@ -1,406 +1,883 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C&S - Consulenza e Selezione | Centro Supporto</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centro di supporto | C&amp;S - Estrattore Casuale di Numeri e Lettere</title>
+<meta name="description" content="Centro di supporto di C&amp;S - Estrattore Casuale di Numeri e Lettere: guide operative, domande frequenti e contatti dell'assistenza.">
+<meta name="theme-color" content="#0F5080">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 </head>
 <body>
-    <!-- LOADING SCREEN -->
-    <div id="loader" class="loader-wrapper">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <p class="loader-text">Caricamento Guida In Corso...</p>
-        </div>
-    </div>
+<a class="skip-link" href="#contenuto">Vai al contenuto principale</a>
 
-    <!-- SFONDO SPLINE 3D -->
-    <div class="spline-container">
-        <iframe 
-            id="spline-background" 
-            src='https://my.spline.design/cybermannequin-pz7OkIdnMGOncgiSaOCN14tk/' 
-            frameborder='0' 
-            width='100%' 
-            height='100%'
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <!-- OVERLAY GRADIENT -->
-    <div class="overlay-gradient"></div>
-
-    <!-- BADGE PERSONALIZZATO C&S - STATICO -->
-    <div class="custom-spline-badge">
-        <a href="https://www.consulenzaeselezione.com/" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
-                <path d="M2 10H18M10 2C10 2 6 5 6 10C6 15 10 18 10 18M10 2C10 2 14 5 14 10C14 15 10 18 10 18" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <span>Consulenza e Selezione</span>
-        </a>
-    </div>
-
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="logo.png" alt="C&S Logo" class="logo-image">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active" data-text="Home">Home</a></li>
-                <li><a href="#guide" class="nav-link" data-text="Guide">Guide</a></li>
-                <li><a href="#faq" class="nav-link" data-text="FAQ">FAQ</a></li>
-                <li><a href="#contatti" class="nav-link" data-text="Contatti">Contatti</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#inizio">
+      <img class="brand-logo" src="logo-cs-esteso.png" width="677" height="98" alt="C&amp;S - Consulenza e Selezione">
+    </a>
+    <span class="brand-label" aria-hidden="true">Centro di supporto</span>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon nav-toggle-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon nav-toggle-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigazione principale">
+      <ul>
+        <li><a href="#guide" data-nav="guide">Guide</a></li>
+        <li><a href="#faq" data-nav="faq">FAQ</a></li>
+        <li><a href="#contatti" data-nav="contatti">Contatti</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-badge" data-aos="fade-down">
-                <span class="badge-icon">✨</span>
-                <span>Centro Supporto Digitale</span>
-            </div>
-            
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                <span class="gradient-text">Centro</span>
-                <span class="gradient-text">Supporto</span>
-            </h1>
-            
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
-                La tua guida completa per <strong>C&S Estrattore</strong>
-            </p>
-            
-            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
-                <button class="btn btn-primary" onclick="scrollToSection('guide')">
-                    <span>Inizia Ora</span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="btn btn-secondary" onclick="scrollToSection('contatti')">
-                    <span>Contattaci</span>
-                </button>
-            </div>
+<main id="contenuto" tabindex="-1">
 
-            <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Casuale</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-number">5 Min</div>
-                    <div class="stat-label">Setup</div>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Supporto</div>
-                </div>
-            </div>
+  <section class="hero" id="inizio" aria-labelledby="hero-title">
+    <svg class="hero-deco" viewBox="0 0 520 450" aria-hidden="true" focusable="false">
+      <polygon points="130,20 390,20 505,225 390,430 130,430 15,225" fill="none" stroke="currentColor" stroke-width="30"/>
+      <polygon points="205,150 315,150 370,225 315,300 205,300 150,225" fill="none" stroke="currentColor" stroke-width="18"/>
+    </svg>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Assistenza utenti</p>
+        <h1 id="hero-title">Centro di supporto</h1>
+        <p class="hero-product">C&amp;S - Estrattore Casuale di Numeri e Lettere <span class="version-pill">Versione 1.1.0</span></p>
+        <p class="lead">Guide operative, risposte alle domande frequenti e contatti dell'assistenza per l'utilizzo del programma.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#guide">Guide <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <a class="btn btn-secondary" href="#contatti">Contatti</a>
         </div>
-    </section>
-
-    <!-- GUIDE SECTION -->
-    <section id="guide" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Guide</span>
-                <h2 class="section-title">Come Utilizzare <span class="gradient-text">C&S Estrattore</span></h2>
-                <p class="section-description">Scopri tutte le funzionalità in pochi semplici step</p>
-            </div>
-
-            <div class="cards-grid">
-                <div class="card card-animated" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800">
-                    <div class="card-glow"></div>
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 4L6 14V34L24 44L42 34V14L24 4Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M24 24L42 14M24 24L6 14M24 24V44" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Guida Rapida</h3>
-                    <p class="card-text">Inizia in 5 minuti con la nostra guida step-by-step completa per utilizzare C&S Estrattore</p>
-                    <button class="card-button" onclick="openModal('quick-guide')">
-                        <span>Scopri di più</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="card card-animated" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="800">
-                    <div class="card-glow"></div>
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M40 20V8H28" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M28 20L40 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 28V40H20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 28L8 40" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Importazione Dati</h3>
-                    <p class="card-text">Recupera e carica le tue sessioni salvate con la password impostata</p>
-                    <button class="card-button" onclick="openModal('import-guide')">
-                        <span>Scopri di più</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="card card-animated" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="800">
-                    <div class="card-glow"></div>
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="3"/>
-                            <path d="M24 16V24L30 30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Estrazione Casuale</h3>
-                    <p class="card-text">Scopri come funziona l'algoritmo di estrazione casuale certificato e garantito</p>
-                    <button class="card-button" onclick="openModal('extraction-guide')">
-                        <span>Scopri di più</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="card card-animated" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="800">
-                    <div class="card-glow"></div>
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M12 8V40H36V16L28 8H12Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M28 8V16H36" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Esportazione Risultati</h3>
-                    <p class="card-text">Esporta e salva i risultati delle estrazioni in formato PDF</p>
-                    <button class="card-button" onclick="openModal('export-guide')">
-                        <span>Scopri di più</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+        <div class="hero-topics">
+          <p class="hero-topics-label" id="topics-label">Argomenti principali</p>
+          <ul class="chip-list" aria-labelledby="topics-label">
+            <li><a class="chip" href="#faq-avviso-windows">Avviso di Windows</a></li>
+            <li><a class="chip" href="#faq-account-creazione">Account</a></li>
+            <li><a class="chip" href="#faq-password-richiesta">Password dell'archivio</a></li>
+            <li><a class="chip" href="#faq-importa">Importazione dallo storico</a></li>
+            <li><a class="chip" href="#faq-export-pdf">Esportazione PDF</a></li>
+            <li><a class="chip" href="#faq-dove-dati">Salvataggio dei dati</a></li>
+            <li><a class="chip" href="#faq-proiettore">Proiettore</a></li>
+          </ul>
         </div>
-    </section>
+      </div>
 
-    <!-- FAQ SECTION -->
-    <section id="faq" class="section section-dark">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">FAQ</span>
-                <h2 class="section-title">Domande <span class="gradient-text">Frequenti</span></h2>
-                <p class="section-description">Risposte alle domande più comuni</p>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="faq-question">
-                        <span>Come posso iniziare ad usare C&S Estrattore?</span>
-                        <div class="faq-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>È semplicissimo! Apri l'applicazione, inserisci i tuoi numeri o lettere, clicca su "Aggiungi" e poi "Prepara". Premi SPAZIO sulla tastiera per avviare l'estrazione casuale.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="faq-question">
-                        <span>Posso importare sessioni salvate?</span>
-                        <div class="faq-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sì! Clicca su "Importa Storico", inserisci la password che hai scelto all'inizio, seleziona la sessione dalla lista a sinistra e continua con le estrazioni.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="faq-question">
-                        <span>L'estrazione è veramente casuale?</span>
-                        <div class="faq-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Assolutamente sì! Utilizziamo algoritmi certificati che garantiscono una randomizzazione completamente casuale, senza ripetizioni e con tracciabilità completa.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="faq-question">
-                        <span>Come posso esportare i risultati?</span>
-                        <div class="faq-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Clicca su "Esporta Storico PDF", inserisci la password, seleziona la sessione che vuoi salvare e scegli la destinazione sul tuo computer.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="faq-question">
-                        <span>Cosa succede se dimentico la password?</span>
-                        <div class="faq-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>La password è fondamentale per proteggere i tuoi dati. Se la dimentichi, contatta il supporto per assistenza nel recupero delle sessioni.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION - 4 CARD CON TELEFONO -->
-    <section id="contatti" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Contatti</span>
-                <h2 class="section-title">Hai bisogno di <span class="gradient-text">Aiuto?</span></h2>
-                <p class="section-description">Il nostro team è sempre disponibile per supportarti</p>
-            </div>
-
-            <div class="contact-grid">
-                <!-- EMAIL -->
-                <div class="contact-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="contact-icon">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M33.3333 6.66669H6.66667C5.19391 6.66669 4 7.8606 4 9.33335V30.6667C4 32.1394 5.19391 33.3334 6.66667 33.3334H33.3333C34.8061 33.3334 36 32.1394 36 30.6667V9.33335C36 7.8606 34.8061 6.66669 33.3333 6.66669Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M36 10L20 21.6667L4 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Email</h3>
-                    <p>Hai domande o suggerimenti? Scrivici!</p>
-                    <button class="contact-link" onclick="showEmailOptions()">
-                        <span>Invia Email</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    
-                    <!-- Menu Email Options -->
-                    <div id="emailOptions" class="email-options" style="display: none;">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=csselezione03@gmail.com&su=Richiesta%20Supporto%20C%26S%20Estrattore&body=Ciao%20team%20C%26S,%0A%0A" target="_blank" rel="noopener noreferrer" class="email-option">
-                            📧 Apri Gmail
-                        </a>
-                        <a href="mailto:csselezione03@gmail.com" class="email-option">
-                            💻 Apri App Email
-                        </a>
-                        <button class="email-option copy-email" onclick="copyEmail(event)">
-                            📋 Copia Email
-                        </button>
-                    </div>
-                </div>
-
-                <!-- TELEFONO -->
-                <div class="contact-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="contact-icon">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M36 28.2V33.2C36.0011 33.6701 35.9058 34.1355 35.7208 34.5672C35.5357 34.9989 35.2652 35.3876 34.9256 35.7083C34.586 36.029 34.1847 36.2748 33.7463 36.4298C33.3079 36.5849 32.8419 36.6457 32.38 36.6084C27.1786 36.0284 22.1892 34.3156 17.78 31.6084C13.6869 29.1457 10.2157 25.6745 7.75296 21.5817C5.03798 17.1517 3.32481 12.1397 2.75796 6.91835C2.72073 6.45806 2.78118 5.99369 2.93531 5.5564C3.08944 5.1191 3.33379 4.71857 3.65243 4.37926C3.97106 4.03995 4.35746 3.76927 4.78655 3.58343C5.21565 3.3976 5.67862 3.30093 6.14629 3.30002H11.1463C11.9744 3.29166 12.7783 3.59344 13.4019 4.14677C14.0254 4.70009 14.4253 5.46653 14.5296 6.29502C14.724 7.95082 15.1228 9.57755 15.7173 11.145C15.9364 11.7089 15.992 12.3225 15.8782 12.9164C15.7643 13.5103 15.4854 14.0611 15.0713 14.51L12.993 16.5884C15.2488 20.8706 18.5521 24.1738 22.8343 26.4297L24.9126 24.3514C25.3616 23.9372 25.9124 23.6583 26.5063 23.5445C27.1002 23.4307 27.7138 23.4862 28.2776 23.7054C29.8451 24.2999 31.4719 24.6987 33.1276 24.893C33.9624 24.9981 34.7338 25.4037 35.2883 26.0355C35.8428 26.6674 36.1415 27.4803 36.1276 28.3167L36 28.2Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Telefono</h3>
-                    <p>Chiamaci per supporto immediato e assistenza diretta</p>
-                    <a href="tel:067900345" class="contact-link">
-                        <span>06.7900345</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <!-- SEDE OPERATIVA -->
-                <div class="contact-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="contact-icon">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M20 4C14.48 4 10 8.48 10 14C10 21.5 20 36 20 36C20 36 30 21.5 30 14C30 8.48 25.52 4 20 4Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="20" cy="14" r="4" stroke="currentColor" stroke-width="3"/>
-                        </svg>
-                    </div>
-                    <h3>Sede Operativa</h3>
-                    <p>Vieni a trovarci presso le nostre sedi per assistenza dedicata e consulenza personalizzata</p>
-                    <button class="contact-link" onclick="openModal('location-info')">
-                        <span>Scopri Dove Siamo</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- SUPPORTO 24/7 -->
-                <div class="contact-card" data-aos="flip-left" data-aos-delay="400">
-                    <div class="contact-icon">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M20 4C11.1634 4 4 11.1634 4 20C4 28.8366 11.1634 36 20 36C28.8366 36 36 28.8366 36 20C36 11.1634 28.8366 4 20 4Z" stroke="currentColor" stroke-width="3"/>
-                            <path d="M20 12V20L26 26" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Supporto 24/7</h3>
-                    <p>Sempre a vostra disposizione, risposta in breve tempo</p>
-                    <a href="mailto:csselezione03@gmail.com" class="contact-link">
-                        <span>Richiedi Supporto</span>
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MODAL -->
-    <div id="modal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div id="modal-body"></div>
-        </div>
+      <aside class="keys-card" aria-labelledby="keys-title">
+        <h2 class="keys-title" id="keys-title">Comandi essenziali</h2>
+        <p class="keys-sub">Tasti e pulsanti usati durante le estrazioni</p>
+        <dl class="keys-list">
+          <div class="keys-row">
+            <dt><kbd>SPAZIO</kbd></dt>
+            <dd>Avvia l'estrazione dopo «Prepara»</dd>
+          </div>
+          <div class="keys-row">
+            <dt><kbd>F11</kbd></dt>
+            <dd>Alterna schermo intero e finestra</dd>
+          </div>
+          <div class="keys-row">
+            <dt><span class="ui-button-glyph" role="img" aria-label="Pulsante menu"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></dt>
+            <dd>Pulsante in alto a destra: apre e chiude il pannello dei comandi</dd>
+          </div>
+          <div class="keys-row">
+            <dt><kbd>Invio</kbd> <kbd>Esc</kbd></dt>
+            <dd>Confermano o annullano nelle finestre di messaggio</dd>
+          </div>
+        </dl>
+        <a class="text-link" href="#faq-tasti">Tasti e scorciatoie <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9.5 6 6 6-6 6"/></svg></a>
+      </aside>
     </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="logo.png" alt="C&S Logo" class="footer-logo-img">
-            </div>
-            <div class="footer-text">
-                <p>&copy; 2025 C&S - Consulenza e Selezione. Tutti i diritti riservati.</p>
-                <p>Versione Software: 1.0.0</p>
-                <p class="developer-credit">Developed by <span class="developer-name">Marius</span></p>
-            </div>
+  <section class="section" id="guide" aria-labelledby="guide-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Guide</p>
+        <h2 class="section-title" id="guide-title">Procedure passo per passo</h2>
+        <p class="section-lead">Le operazioni principali del programma, descritte nell'ordine in cui vengono eseguite. È disponibile anche un <a href="#video-dimostrativo">video dimostrativo</a>.</p>
+      </header>
+      <ul class="guide-grid" role="list">
+<li class="guide-card guide-card--featured">
+<span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.6v6.8l5.4-3.4z"/></svg></span>
+<h3 class="card-title">Guida rapida</h3>
+<p class="card-text">I passaggi essenziali per preparare ed eseguire le estrazioni di una sessione.</p>
+<ol class="flow" aria-label="Sequenza principale"><li><span class="flow-pill">Prepara</span></li><li><kbd>SPAZIO</kbd></li><li><span class="flow-pill">Prossima Estrazione</span></li></ol><div class="card-foot"><span class="card-meta">8 passaggi</span><button type="button" class="card-action" data-modal-open="modal-guida-rapida">Apri la guida<span class="sr-only">: Guida rapida</span><svg class="icon card-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+</li>
+<li class="guide-card">
+<span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5v10.5"/><path d="m7.5 9.5 4.5 4.5 4.5-4.5"/><path d="M4 15.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2.5"/></svg></span>
+<h3 class="card-title">Installazione e primo avvio</h3>
+<p class="card-text">Installazione del programma, avviso di Windows, creazione dell'account e primo utilizzo.</p>
+<div class="card-foot"><span class="card-meta">8 passaggi</span><button type="button" class="card-action" data-modal-open="modal-guida-installazione">Apri la guida<span class="sr-only">: Installazione e primo avvio</span><svg class="icon card-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+</li>
+<li class="guide-card">
+<span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3.5 4.5v4h4"/><path d="M12 7.5V12l3 2"/></svg></span>
+<h3 class="card-title">Importazione dallo storico</h3>
+<p class="card-text">Ripresa di una sessione salvata, anche dopo una chiusura del programma o del computer.</p>
+<div class="card-foot"><span class="card-meta">7 passaggi</span><button type="button" class="card-action" data-modal-open="modal-guida-importazione">Apri la guida<span class="sr-only">: Importazione dallo storico</span><svg class="icon card-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+</li>
+<li class="guide-card">
+<span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-10z"/><path d="M14 3.5v5h5"/><path d="M8.5 13h7M8.5 16.5h4.5"/></svg></span>
+<h3 class="card-title">Esportazione PDF</h3>
+<p class="card-text">Creazione di un documento PDF con lo storico di una sessione.</p>
+<div class="card-foot"><span class="card-meta">6 passaggi</span><button type="button" class="card-action" data-modal-open="modal-guida-pdf">Apri la guida<span class="sr-only">: Esportazione PDF</span><svg class="icon card-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+</li>
+<li class="guide-card">
+<span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.5 11A7.5 7.5 0 0 0 6.2 7L4.5 8.5"/><path d="M4.5 4.5v4h4"/><path d="M4.5 13a7.5 7.5 0 0 0 13.3 4l1.7-1.5"/><path d="M19.5 19.5v-4h-4"/></svg></span>
+<h3 class="card-title">Nuova estrazione</h3>
+<p class="card-text">Chiusura della sessione attiva e avvio di una nuova procedura senza uscire dal programma.</p>
+<div class="card-foot"><span class="card-meta">6 passaggi</span><button type="button" class="card-action" data-modal-open="modal-guida-nuova-estrazione">Apri la guida<span class="sr-only">: Nuova estrazione</span><svg class="icon card-action-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button></div>
+</li>
+      </ul>
+      <section class="video-block" id="video-dimostrativo" aria-labelledby="video-title">
+        <div class="video-info">
+          <span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10.2 9.3v5.4l4.5-2.7z"/></svg></span>
+          <h3 class="card-title" id="video-title">Video dimostrativo</h3>
+          <p class="card-text" id="video-desc">Il video mostra le operazioni principali: accesso all'account, creazione della lista di numeri, preparazione, estrazione, storico, nuova estrazione con l'esempio delle lettere e importazione da storico. Le frecce rosse indicano i punti in cui fare clic.</p>
+          <ul class="video-meta" role="list">
+            <li>Durata: 2 min 7 s</li>
+            <li>Senza audio, con didascalie in italiano</li>
+          </ul>
         </div>
-    </footer>
+        <div class="video-media">
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline poster="video/demo-estrattore-anteprima.jpg" width="1280" height="816" aria-labelledby="video-title" aria-describedby="video-desc">
+              <source src="video/demo-estrattore.mp4" type="video/mp4">
+              <p class="video-fallback">Il browser non riproduce il video. <a href="video/demo-estrattore.mp4">Aprire il video dimostrativo (MP4)</a>.</p>
+            </video>
+          </div>
+          <p class="video-note">Se il video non si avvia, è possibile aprire direttamente il <a href="video/demo-estrattore.mp4">file del video (MP4, circa 2 MB)</a>.</p>
+        </div>
+      </section>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+  <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Domande frequenti</p>
+        <h2 class="section-title" id="faq-title">Domande e risposte sul programma</h2>
+        <p class="section-lead">Le situazioni che possono presentarsi durante l'utilizzo, dall'installazione alla conservazione dei dati.</p>
+      </header>
+      <div class="faq-layout">
+        <aside class="faq-aside">
+          <nav class="faq-nav" aria-label="Argomenti delle domande frequenti">
+            <p class="faq-nav-title">Argomenti</p>
+            <ul>
+<li><a href="#faq-installazione" data-section="faq-installazione"><span class="faq-nav-label">Installazione e avvio</span><span class="faq-nav-count" data-count-for="faq-installazione">6</span></a></li>
+<li><a href="#faq-account" data-section="faq-account"><span class="faq-nav-label">Account e accesso</span><span class="faq-nav-count" data-count-for="faq-account">5</span></a></li>
+<li><a href="#faq-password" data-section="faq-password"><span class="faq-nav-label">Password e sessioni</span><span class="faq-nav-count" data-count-for="faq-password">6</span></a></li>
+<li><a href="#faq-lista" data-section="faq-lista"><span class="faq-nav-label">Preparazione della lista</span><span class="faq-nav-count" data-count-for="faq-lista">4</span></a></li>
+<li><a href="#faq-estrazione" data-section="faq-estrazione"><span class="faq-nav-label">Estrazione</span><span class="faq-nav-count" data-count-for="faq-estrazione">6</span></a></li>
+<li><a href="#faq-storico" data-section="faq-storico"><span class="faq-nav-label">Storico e PDF</span><span class="faq-nav-count" data-count-for="faq-storico">5</span></a></li>
+<li><a href="#faq-conservazione" data-section="faq-conservazione"><span class="faq-nav-label">Conservazione dei dati</span><span class="faq-nav-count" data-count-for="faq-conservazione">3</span></a></li>
+<li><a href="#faq-schermo" data-section="faq-schermo"><span class="faq-nav-label">Schermo e comandi</span><span class="faq-nav-count" data-count-for="faq-schermo">5</span></a></li>
+<li><a href="#faq-assistenza" data-section="faq-assistenza"><span class="faq-nav-label">Problemi e assistenza</span><span class="faq-nav-count" data-count-for="faq-assistenza">5</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="faq-main">
+          <div class="faq-search" role="search">
+            <label class="faq-search-label" for="faq-search-input">Cerca nelle domande frequenti</label>
+            <div class="search-field">
+              <svg class="icon search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/></svg>
+              <input id="faq-search-input" type="search" placeholder="Ad esempio: password, PDF, proiettore" autocomplete="off" spellcheck="false" aria-describedby="faq-status">
+              <button type="button" class="search-clear" data-search-clear aria-label="Cancella la ricerca" hidden><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+            </div>
+            <p class="faq-status" id="faq-status" aria-live="polite">45 domande in 9 argomenti.</p>
+          </div>
+<section class="faq-group" id="faq-installazione" aria-labelledby="faq-installazione-title">
+<h3 class="faq-group-title" id="faq-installazione-title">Installazione, aggiornamento e avvio</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-avviso-windows" name="faq">
+<summary><span class="faq-q">Durante l'installazione Windows mostra la schermata «Windows ha protetto il PC». Come procedere?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>La schermata compare perché il file di installazione, scaricato da Internet, non è ancora firmato digitalmente: Windows lo indica come «Editore sconosciuto».</p>
+<p>Per proseguire:</p>
+<ol><li>Fare clic su «Ulteriori informazioni».</li><li>Fare clic su «Esegui comunque».</li><li>Se compare la finestra «Seleziona modo installazione», scegliere «Installa per tutti gli utenti (suggerito)», che richiede i diritti di amministratore, oppure «Installa solo per l'utente attuale».</li><li>Se si è scelta l'installazione per tutti gli utenti, alla richiesta di Windows «Vuoi consentire a questa app di apportare modifiche al dispositivo?» rispondere «Sì».</li></ol>
+<p>In alternativa, prima di avviare il file: fare clic con il tasto destro sul file di installazione, scegliere «Proprietà», spuntare «Annulla blocco» e confermare con «OK».</p>
+<p>Se il file viene copiato da una chiavetta USB o da una cartella di rete, l'avviso può non comparire.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-requisiti" name="faq">
+<summary><span class="faq-q">Quali sono i requisiti e come si svolge l'installazione?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Il programma richiede Windows a 64 bit.</p>
+<p>All'avvio dell'installazione, se compare la finestra «Seleziona modo installazione», scegliere «Installa per tutti gli utenti (suggerito)», che richiede i diritti di amministratore, oppure «Installa solo per l'utente attuale». Se si è scelta l'installazione per tutti gli utenti, alla richiesta di Windows «Vuoi consentire a questa app di apportare modifiche al dispositivo?» rispondere «Sì».</p>
+<p>Occorre poi accettare il contratto di licenza, leggere le informazioni preliminari e scegliere la cartella di destinazione (predefinita: Programmi; per l'installazione per il solo utente attuale una cartella del profilo utente). L'installazione aggiunge un collegamento nel menu Start e, se l'opzione è selezionata, anche sul Desktop. Al termine il programma può essere avviato subito.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-primo-avvio" name="faq">
+<summary><span class="faq-q">Come si avvia il programma e che cosa compare al primo avvio?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Il programma si avvia dal collegamento «Estrattore Casuale di Numeri e Lettere» nel menu Start o sul Desktop e occupa l'intero schermo.</p>
+<p>Al primo avvio compare la schermata «Crea il tuo account», in cui si impostano il nome utente e la password dell'account (vedere <a href="#faq-account-creazione">Come si crea l'account al primo avvio?</a>). Agli avvii successivi il programma si apre direttamente se l'accesso è stato ricordato; in caso contrario compare la schermata «Bentornato», in cui inserire le credenziali.</p>
+<p>Dopo l'accesso compare il logo C&amp;S su sfondo bianco. Il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra apre e chiude il pannello dei comandi. Il pannello si chiude anche con un clic in un punto qualsiasi della schermata principale. Il pannello contiene le schede «Prepara Estrazione», «Storico» e «Aiuto».</p>
+<p>La password dell'archivio delle sessioni non viene richiesta all'avvio: si imposta alla creazione della prima sessione (vedere <a href="#faq-password-richiesta">Quando viene richiesta la password dell'archivio?</a>).</p>
+</div>
+</details>
+<details class="faq-item" id="faq-aggiornamento" name="faq">
+<summary><span class="faq-q">Come si installa una nuova versione? I dati vengono conservati?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>È sufficiente avviare il file di installazione della nuova versione. Il programma già presente viene aggiornato nella stessa cartella, senza creare una seconda installazione. Prima di avviare l'aggiornamento, chiudere il programma.</p>
+<p>Lo storico delle estrazioni, l'archivio delle sessioni, l'account e la password dell'archivio sono salvati nella cartella dei dati dell'utente, separata dalla cartella del programma, e vengono conservati.</p>
+<p>La versione installata è indicata nella scheda «Aiuto» del pannello (attualmente «Versione 1.1.0»).</p>
+</div>
+</details>
+<details class="faq-item" id="faq-disinstallazione" name="faq">
+<summary><span class="faq-q">Come si disinstalla il programma? Lo storico viene cancellato?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Il programma si rimuove da «Impostazioni &gt; App &gt; App installate» (oppure da «Pannello di controllo &gt; Programmi &gt; Programmi e funzionalità»).</p>
+<p>La disinstallazione rimuove solo i file del programma. La cartella dei dati (<code>%APPDATA%\CS_Estrattore</code>), che contiene l'archivio delle sessioni, lo storico e l'account, non viene cancellata.</p>
+<p>Per eliminare anche i dati occorre cancellare a mano questa cartella, dopo averne conservato una copia se necessario.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-internet" name="faq">
+<summary><span class="faq-q">È necessaria una connessione a Internet?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>No. Preparazione, estrazione, storico, importazione ed esportazione PDF funzionano sui file del computer, senza connessione a Internet.</p>
+<p>La connessione serve solo per aprire nel browser il sito di supporto (scheda «Aiuto») o il sito aziendale (clic sul logo in cima al pannello).</p>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-account" aria-labelledby="faq-account-title">
+<h3 class="faq-group-title" id="faq-account-title">Account e accesso</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-account-creazione" name="faq">
+<summary><span class="faq-q">Come si crea l'account al primo avvio?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Al primo avvio il programma mostra, a schermo intero, la schermata «Crea il tuo account». Finché l'account non viene creato, il pannello dei comandi e il tasto <kbd>SPAZIO</kbd> non sono disponibili.</p>
+<ol><li>Nel campo «Nome utente» indicare un nome di almeno 3 caratteri.</li><li>Nel campo «Password» digitare una password di almeno 6 caratteri. I caratteri vengono mascherati da asterischi.</li><li>Nel campo «Conferma password» digitare di nuovo la stessa password.</li><li>Lasciare selezionata la casella «Ricorda l'accesso su questo computer», selezionata in modo predefinito, per aprire direttamente il programma agli avvii successivi; deselezionarla per inserire le credenziali a ogni avvio.</li><li>Premere «Crea account» oppure <kbd>Invio</kbd>.</li></ol>
+<p>Se i dati non sono validi, sopra il pulsante compare uno dei messaggi «Il nome utente deve contenere almeno 3 caratteri.», «La password deve contenere almeno 6 caratteri.» oppure «Le due password non coincidono.».</p>
+<p>La password dell'account serve anche a reimpostare la password dell'archivio delle sessioni in caso di smarrimento (vedere <a href="#faq-password-dimenticata">Che cosa fare se la password dell'archivio è stata dimenticata?</a>). Il pulsante «Esci dal programma», presente nella stessa schermata, chiude il programma dopo la conferma.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-account-accesso" name="faq">
+<summary><span class="faq-q">Agli avvii successivi vengono richieste le credenziali?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Dipende dalla casella «Ricorda l'accesso su questo computer»:</p>
+<ul><li><strong>selezionata</strong>: il programma si apre direttamente, senza richiedere le credenziali;</li><li><strong>non selezionata</strong>: compare la schermata «Bentornato», con il nome utente già inserito. Digitare la password e premere «Accedi» oppure <kbd>Invio</kbd>.</li></ul>
+<p>Nel nome utente maiuscole e minuscole sono equivalenti; nella password sono invece distinte. Se le credenziali non corrispondono compare il messaggio «Nome utente o password non corretti.» e la password va digitata di nuovo.</p>
+<p>Anche nella schermata «Bentornato» la casella «Ricorda l'accesso su questo computer» è selezionata in modo predefinito: se resta selezionata al momento dell'accesso, agli avvii successivi il programma si apre direttamente.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-account-credenziali" name="faq">
+<summary><span class="faq-q">Che cosa fare se le credenziali dell'account sono state dimenticate?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Nella schermata «Bentornato» il collegamento «Credenziali dimenticate?» mostra l'indirizzo dell'assistenza. Per reimpostare l'account occorre contattare l'assistenza all'indirizzo <a class="js-email" href="mailto:sviluppo@ciesseselezione.it?subject=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A">sviluppo@ciesseselezione.it</a>.</p>
+<p>Il programma non può mostrare la password dell'account, perché non la conserva in chiaro.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-account-disconnetti" name="faq">
+<summary><span class="faq-q">Come si visualizza l'utente collegato e come ci si disconnette?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Nella scheda «Aiuto» del pannello, sezione «ACCOUNT», sono indicati l'utente collegato («Utente: ...») e il collegamento «Disconnetti».</p>
+<p>Facendo clic su «Disconnetti» il programma chiede conferma con il messaggio «Disconnettere l'utente «...»?». Confermando con «Sì»:</p>
+<ul><li>compare subito la schermata «Bentornato»: per continuare a usare il programma occorre inserire di nuovo le credenziali;</li><li>l'accesso non è più ricordato: le credenziali vengono richieste anche agli avvii successivi, finché non si accede di nuovo con la casella «Ricorda l'accesso su questo computer» selezionata.</li></ul>
+</div>
+</details>
+<details class="faq-item" id="faq-account-dati" name="faq">
+<summary><span class="faq-q">Dove viene conservato l'account? Vale per tutti gli utenti del computer?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>L'account è legato all'utente di Windows e viene salvato nella cartella dei dati del programma (<code>%APPDATA%\CS_Estrattore</code>). Ogni utente di Windows che usa il programma sullo stesso computer crea il proprio account al primo avvio.</p>
+<p>La password dell'account non viene salvata in chiaro: il programma conserva solo un'impronta crittografica non reversibile, con cui confronta la password digitata. Per questo la password non può essere visualizzata né recuperata dal programma.</p>
+<p>L'account resta disponibile dopo l'aggiornamento del programma ed è compreso nella copia della cartella dei dati (vedere <a href="#faq-backup">Come si conserva una copia di sicurezza dei dati?</a>).</p>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-password" aria-labelledby="faq-password-title">
+<h3 class="faq-group-title" id="faq-password-title">Password dell'archivio e sessioni</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-password-richiesta" name="faq">
+<summary><span class="faq-q">Quando viene richiesta la password dell'archivio e come si imposta la prima volta?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>La password dell'archivio regola l'accesso all'archivio delle sessioni tramite le funzioni del programma ed è distinta dalla password dell'account (vedere <a href="#faq-account-accesso">Agli avvii successivi vengono richieste le credenziali?</a>). Viene richiesta:</p>
+<ul><li>alla creazione di ogni nuova sessione, cioè premendo «Aggiungi» o «Prepara» con una nuova lista;</li><li>per «Importa da Storico»;</li><li>per «Esporta Storico PDF».</li></ul>
+<p>Non viene richiesta all'avvio del programma né per le singole estrazioni.</p>
+<p>La password si imposta alla creazione della prima sessione:</p>
+<ol><li>Nella finestra «Imposta Password» digitare la password (i caratteri vengono mascherati da asterischi) e premere «OK».</li><li>Nella finestra «Conferma Password» rispondere «Sì» per salvarla, oppure «No» per digitarla di nuovo.</li></ol>
+<p>La password non può essere vuota e distingue tra maiuscole e minuscole. Poiché viene digitata una sola volta, controllarla con attenzione prima di confermare. Premendo «Annulla» l'operazione viene interrotta.</p>
+<p>Nelle richieste successive la finestra «Password Richiesta» contiene anche il collegamento «Password dimenticata?» (vedere <a href="#faq-password-dimenticata">Che cosa fare se la password dell'archivio è stata dimenticata?</a>).</p>
+<p>La password è legata all'utente di Windows: ogni utente del computer ha un proprio archivio e una propria password.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-password-errata" name="faq">
+<summary><span class="faq-q">Che cosa succede se si inserisce una password dell'archivio errata?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Compare la finestra «Accesso Negato» con il messaggio «Password errata.». L'operazione richiesta (creazione della sessione, importazione o esportazione) non viene eseguita.</p>
+<p>Per riprovare, ripetere l'operazione e digitare la password corretta, rispettando maiuscole e minuscole. Se la password è stata dimenticata, usare il collegamento «Password dimenticata?» nella finestra «Password Richiesta».</p>
+</div>
+</details>
+<details class="faq-item" id="faq-password-dimenticata" name="faq">
+<summary><span class="faq-q">Che cosa fare se la password dell'archivio è stata dimenticata?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>La password dell'archivio si può reimpostare con la password dell'account:</p>
+<ol><li>Nella finestra «Password Richiesta» fare clic su «Password dimenticata?».</li><li>Nella finestra «Password dimenticata» inserire la password dell'account indicato nel messaggio e premere «OK».</li><li>Nella finestra «Nuova password dell'archivio» digitare la nuova password e premere «OK».</li><li>Nella finestra «Conferma Password» rispondere «Sì» per salvarla, oppure «No» per digitarla di nuovo.</li><li>Compare il messaggio «La nuova password dell'archivio è stata impostata.» e l'operazione richiesta (creazione della sessione, importazione o esportazione) prosegue.</li></ol>
+<p>Se la password dell'account non è corretta compare il messaggio «La password dell'account non è corretta.» e l'operazione non viene eseguita. Premendo «Annulla» l'operazione viene interrotta e la password dell'archivio resta invariata.</p>
+<p>Se anche le credenziali dell'account sono state dimenticate, contattare l'assistenza all'indirizzo <a class="js-email" href="mailto:sviluppo@ciesseselezione.it?subject=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A">sviluppo@ciesseselezione.it</a>.</p>
+<p>La nuova password vale per lo stesso archivio: le sessioni e lo storico già registrati restano disponibili. La scheda «Storico» rimane consultabile anche senza password.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-sessione" name="faq">
+<summary><span class="faq-q">Che cos'è una sessione e quando viene creata?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Una sessione raccoglie la lista iniziale e tutte le estrazioni di una procedura, ad esempio un concorso in una certa data. Viene salvata nell'archivio con il nome indicato dall'operatore.</p>
+<p>Il programma chiede di creare la sessione la prima volta che si preme «Aggiungi» o «Prepara» con una nuova lista. Dopo la password dell'archivio compare la finestra «Nuova Sessione» con la richiesta «Inserire il nome del concorso e la data odierna:».</p>
+<p>Se una sessione è già attiva, gli intervalli aggiunti con «Aggiungi» entrano nella lista della sessione in corso senza altre richieste.</p>
+<p>Se il nome viene lasciato vuoto o si preme «Annulla», la sessione non viene creata e l'operazione si interrompe.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-nome-sessione" name="faq">
+<summary><span class="faq-q">Quali caratteri si possono usare nel nome della sessione?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Nel nome vengono mantenuti lettere (anche accentate), numeri, spazi e trattini. Gli altri caratteri, come barre, punti e apostrofi, vengono tolti.</p>
+<p>Per la data conviene quindi usare i trattini, ad esempio «Concorso Infermieri 14-10-2026»: scrivendo «14/10/2026» il nome salvato diventerebbe «14102026».</p>
+<p>Se il nome non contiene nessun carattere valido, il programma assegna un nome con data e ora, ad esempio «Sessione 2026-10-14_10-30-00».</p>
+</div>
+</details>
+<details class="faq-item" id="faq-sessione-esistente" name="faq">
+<summary><span class="faq-q">Compare il messaggio «Una sessione con questo nome esiste già». Che cosa significa?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Il nome indicato corrisponde a una sessione già presente nell'archivio. Il programma chiede: «Sovrascriverla e ricominciare da zero?».</p>
+<ul><li><strong>«Sì»</strong>: la sessione riparte da zero. Alla pressione di «Prepara», il suo contenuto nell'archivio viene sostituito dalla nuova lista. Le registrazioni precedenti restano comunque nello storico generale (scheda «Storico»).</li><li><strong>«No»</strong>: l'operazione viene annullata. Per continuare una sessione esistente usare «Importa da Storico»; per una nuova procedura indicare un nome diverso.</li></ul>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-lista" aria-labelledby="faq-lista-title">
+<h3 class="faq-group-title" id="faq-lista-title">Preparazione della lista</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-inserire-valori" name="faq">
+<summary><span class="faq-q">Come si inseriscono numeri o lettere?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Nella scheda «Prepara Estrazione», sezione «GENERA INTERVALLO»:</p>
+<ol><li><strong>Numeri</strong>: indicare il primo e l'ultimo numero (ad esempio da 1 a 120) e premere «Aggiungi».</li><li><strong>Lettere</strong>: indicare la lettera iniziale e quella finale (ad esempio da A a Z) e premere «Aggiungi». Le lettere minuscole vengono convertite in maiuscole.</li></ol>
+<p>Tutti i valori dell'intervallo, estremi compresi, vengono aggiunti alla «LISTA OPZIONI», uno per riga. Si possono aggiungere più intervalli uno dopo l'altro.</p>
+<p>Il numero iniziale deve essere minore di quello finale e la lettera iniziale deve precedere quella finale. Per i numeri sono ammessi solo numeri interi.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-valori-a-mano" name="faq">
+<summary><span class="faq-q">È possibile inserire i valori a mano?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Sì. Nel riquadro «LISTA OPZIONI» si può digitare un valore per riga, ad esempio numeri, lettere o codici. Le righe vuote vengono ignorate e gli spazi all'inizio e alla fine di ogni riga vengono tolti.</p>
+<p>Il valore estratto viene mostrato a caratteri molto grandi, quindi conviene usare valori brevi.</p>
+<p>Il contatore «Opzioni in lista», in alto a destra del riquadro, indica il numero di righe inserite. Le righe vuote tra un valore e l'altro vengono contate dal contatore ma ignorate da «Prepara»: per un conteggio esatto non lasciare righe vuote.</p>
+<p>Se dopo aver digitato valori a mano si usa «Aggiungi», i valori dell'intervallo vengono inseriti a partire da una nuova riga, anche se l'ultima riga digitata non è stata terminata con <kbd>Invio</kbd>.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-modificare-lista" name="faq">
+<summary><span class="faq-q">Come si modifica la lista?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>La lista si modifica direttamente nel riquadro «LISTA OPZIONI», aggiungendo, correggendo o cancellando righe. Le modifiche diventano effettive quando si preme «Prepara».</p>
+<p>Dopo ogni estrazione il riquadro mostra solo le opzioni rimaste.</p>
+<p>Il programma non elimina da solo i valori ripetuti: prima di premere «Prepara» controllare che ogni valore compaia una sola volta.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-prepara" name="faq">
+<summary><span class="faq-q">A che cosa serve il pulsante «Prepara»?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>«Prepara» acquisisce la lista e prepara l'estrazione:</p>
+<ol><li>se non c'è una sessione attiva, chiede la password dell'archivio e il nome della sessione;</li><li>per una nuova sessione, registra nello storico la lista iniziale completa;</li><li>chiude il pannello dei comandi e mostra la schermata di attesa con il logo C&amp;S;</li><li>attiva il pulsante «AVVIA ESTRAZIONE» se la lista contiene almeno due opzioni.</li></ol>
+<p>Se la lista è vuota compare il logo e «AVVIA ESTRAZIONE» resta disattivato. Se la lista contiene una sola opzione, il programma mostra il messaggio di conclusione.</p>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-estrazione" aria-labelledby="faq-estrazione-title">
+<h3 class="faq-group-title" id="faq-estrazione-title">Estrazione</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-avviare" name="faq">
+<summary><span class="faq-q">Come si avvia un'estrazione?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Dopo «Prepara», premere il tasto <kbd>SPAZIO</kbd> oppure il pulsante «AVVIA ESTRAZIONE» nel pannello. Il pannello si chiude e sullo schermo compare un'animazione con la scritta «ESTRAZIONE IN CORSO...». Dopo alcuni secondi viene mostrato il valore estratto.</p>
+<p>Durante l'animazione i pulsanti «Prepara» e «AVVIA ESTRAZIONE» sono disattivati e il tasto <kbd>SPAZIO</kbd> non ha effetto.</p>
+<p>Se il cursore si trova in un campo di testo del pannello, il tasto <kbd>SPAZIO</kbd> inserisce uno spazio invece di avviare l'estrazione. In questo caso chiudere prima il pannello con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> o con un clic sulla schermata.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-avvia-disattivato" name="faq">
+<summary><span class="faq-q">Perché il pulsante «AVVIA ESTRAZIONE» è disattivato?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Il pulsante si attiva solo dopo aver premuto «Prepara» e solo se la lista contiene almeno due opzioni. Resta disattivato anche durante l'animazione e sulla schermata del valore estratto, finché non si fa clic su «Prossima Estrazione».</p>
+<p>Controllare la lista e premere «Prepara».</p>
+</div>
+</details>
+<details class="faq-item" id="faq-schermata-estratto" name="faq">
+<summary><span class="faq-q">Che cosa compare sullo schermo al termine dell'estrazione?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Al centro dello schermo compare il valore estratto, a caratteri molto grandi, con sotto la scritta «ESTRATTO». In alto a sinistra c'è il logo C&amp;S e in basso il comando «Prossima Estrazione».</p>
+<p>Il valore resta visualizzato finché non si fa clic su «Prossima Estrazione». In questa fase il tasto <kbd>SPAZIO</kbd> non ha effetto.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-prossima" name="faq">
+<summary><span class="faq-q">Che cosa succede facendo clic su «Prossima Estrazione»?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>L'estrazione viene confermata e registrata nello storico: numero progressivo dell'estrazione, valore estratto ed elenco delle opzioni rimaste, con data e ora. Il valore viene tolto dalla lista.</p>
+<p>Se restano almeno due opzioni, il programma prepara da solo l'estrazione successiva e mostra la schermata di attesa. Per proseguire premere di nuovo <kbd>SPAZIO</kbd>.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-ultima-opzione" name="faq">
+<summary><span class="faq-q">Che cosa succede quando nella lista resta una sola opzione?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Il programma non avvia un'altra estrazione. Mostra il messaggio «Estrazione completata. L'ultima opzione rimasta è: ...» e chiede «Cancellare la lista corrente e pulire lo schermo?».</p>
+<ul><li><strong>«Sì»</strong>: la sessione viene chiusa e il programma torna allo stato iniziale. Lo storico non viene cancellato e l'ultima opzione rimasta compare nell'elenco delle opzioni rimaste dopo l'ultima estrazione.</li><li><strong>«No»</strong>: la lista e la sessione restano attive. Se il messaggio compare dopo «Prossima Estrazione», sullo schermo resta visualizzato l'ultimo valore estratto e il comando «Prossima Estrazione» non ha più effetto: per chiudere la sessione e tornare al logo premere «Nuova Estrazione» e confermare. Il valore, già registrato, non viene registrato una seconda volta.</li></ul>
+</div>
+</details>
+<details class="faq-item" id="faq-nuova-estrazione" name="faq">
+<summary><span class="faq-q">A che cosa serve il pulsante «Nuova Estrazione»?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Chiude la sessione attiva per iniziare una nuova estrazione con una lista diversa, senza uscire dal programma. Prima chiede conferma con il messaggio «Avviare una nuova estrazione?», che indica la sessione che verrà chiusa.</p>
+<p>Confermando:</p>
+<ol><li>se sullo schermo è ancora visualizzato un valore non confermato con «Prossima Estrazione», il valore viene prima registrato nello storico della sessione;</li><li>la lista e i campi vengono svuotati e lo schermo torna al logo;</li><li>lo storico delle estrazioni resta disponibile.</li></ol>
+<p>Il nome della nuova sessione viene chiesto quando si inserisce la nuova lista. Durante l'animazione dell'estrazione il pulsante non ha effetto.</p>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-storico" aria-labelledby="faq-storico-title">
+<h3 class="faq-group-title" id="faq-storico-title">Storico, importazione ed esportazione PDF</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-scheda-storico" name="faq">
+<summary><span class="faq-q">Che cosa contiene la scheda «Storico»?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>La scheda «Storico» mostra lo storico generale di tutte le sessioni registrate sul computer dall'utente di Windows corrente. Contiene:</p>
+<ul><li>l'inizio di ogni sessione, con la lista iniziale completa;</li><li>ogni estrazione confermata («Estrazione N° ... --- Estratto: ...»);</li><li>dopo ogni estrazione, l'elenco delle opzioni rimaste con data e ora;</li><li>le eventuali sessioni importate.</li></ul>
+<p>La scheda si aggiorna in tempo reale ed è destinata alla consultazione.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-importa" name="faq">
+<summary><span class="faq-q">Come si riprende una sessione precedente con «Importa da Storico»?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<ol><li>Premere «Importa da Storico» nel pannello e inserire la password dell'archivio.</li><li>Nella finestra «Seleziona Sessione da Importare» cercare la sessione. Il campo «Cerca» filtra l'elenco per nome. I pulsanti «Più recenti» e «Meno recenti» ordinano le sessioni per data dell'ultimo aggiornamento; l'ordine predefinito è «Più recenti».</li><li>Selezionare la sessione e premere «Conferma», oppure fare doppio clic o premere <kbd>Invio</kbd>. Se la ricerca lascia una sola sessione, «Conferma» la seleziona direttamente.</li><li>Se la lista corrente non è vuota, confermare la sua sostituzione.</li><li>Il programma carica le opzioni rimaste dopo l'ultima estrazione registrata e indica quante ne ha importate. La sessione importata diventa la sessione attiva e le estrazioni successive vengono aggiunte al suo storico. La numerazione delle estrazioni prosegue dall'ultima registrata nella sessione: ad esempio, se l'ultima registrata è «Estrazione N° 12», la successiva è «Estrazione N° 13».</li><li>Premere «Prepara» e proseguire con <kbd>SPAZIO</kbd>.</li></ol>
+<p>Se l'importazione viene annullata (ad esempio con «Annulla» nella finestra di selezione oppure con «No» alla richiesta di sostituire la lista) o se il programma segnala che la sessione non contiene opzioni da importare, la sessione attiva e la lista corrente restano invariate.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-importa-nessuna-lista" name="faq">
+<summary><span class="faq-q">Perché l'importazione segnala «Nessuna lista di 'Opzioni Rimaste' trovata»?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>L'importazione carica le opzioni rimaste dopo l'ultima estrazione registrata. Il messaggio compare quindi quando nella sessione scelta non è stata ancora confermata nessuna estrazione.</p>
+<p>In questo caso reinserire la lista: la lista iniziale della sessione resta consultabile nella scheda «Storico».</p>
+<p>Se invece il programma segnala che l'archivio «<code>ArchivioSessioni.zip</code>» non è stato ancora creato, significa che non è stata ancora preparata nessuna sessione: l'archivio viene creato alla prima pressione di «Prepara» con una nuova sessione.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-export-pdf" name="faq">
+<summary><span class="faq-q">Come si esporta in PDF lo storico di una sessione?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<ol><li>Premere «Esporta Storico PDF» e inserire la password dell'archivio.</li><li>Nella finestra «Seleziona Storico da Esportare in PDF» scegliere la sessione (ricerca e ordinamento funzionano come nell'importazione) e premere «Conferma».</li><li>Nella finestra «Salva Storico come PDF» scegliere la cartella di destinazione. Il nome proposto è quello della sessione e si può modificare.</li><li>Alla fine il programma mostra il percorso del file creato.</li></ol>
+<p>Il PDF, in formato A4, riporta il contenuto della sessione registrato nell'archivio: la lista iniziale completa, ogni estrazione con numero progressivo e valore estratto e, dopo ogni estrazione, l'elenco delle opzioni rimaste con data e ora.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-pdf-dove" name="faq">
+<summary><span class="faq-q">Dove viene salvato il file PDF esportato?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Nella cartella e con il nome scelti nella finestra di salvataggio. Il percorso completo compare nel messaggio «Storico esportato con successo in: ...».</p>
+<p>Il PDF non viene copiato in automatico nella cartella dei dati del programma.</p>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-conservazione" aria-labelledby="faq-conservazione-title">
+<h3 class="faq-group-title" id="faq-conservazione-title">Conservazione dei dati</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-dove-dati" name="faq">
+<summary><span class="faq-q">Dove vengono salvati i dati?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Nella cartella <code>%APPDATA%\CS_Estrattore</code> dell'utente di Windows, ad esempio <code>C:\Users\[nome utente]\AppData\Roaming\CS_Estrattore</code>. Per aprirla premere <kbd>Windows</kbd>+<kbd>R</kbd>, digitare <code>%APPDATA%\CS_Estrattore</code> e premere <kbd>Invio</kbd>.</p>
+<p>La cartella contiene:</p>
+<ul><li><code>ArchivioSessioni.zip</code>: l'archivio delle sessioni, con un file per ogni sessione;</li><li><code>storico_estrazioni.log</code>: lo storico generale mostrato nella scheda «Storico»;</li><li>il file dell'account, con il nome utente e l'impronta della password dell'account;</li><li>un file di configurazione con l'impronta della password dell'archivio;</li><li><code>activity_log</code>: il registro tecnico di funzionamento del programma.</li></ul>
+<p>I dati restano sul computer e non vengono trasmessi in rete.</p>
+<p>I file della cartella non sono cifrati: la password dell'archivio regola l'accesso solo tramite le funzioni del programma. Si consiglia di proteggere l'account di Windows con una password e di conservare copie di sicurezza della cartella (vedere <a href="#faq-backup">Come si conserva una copia di sicurezza dei dati?</a>).</p>
+</div>
+</details>
+<details class="faq-item" id="faq-chiusura-improvvisa" name="faq">
+<summary><span class="faq-q">Che cosa succede se il programma o il computer si chiudono all'improvviso?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Ogni estrazione confermata con «Prossima Estrazione» viene salvata subito su disco, nello storico e nell'archivio delle sessioni, senza aspettare la chiusura del programma. L'archivio viene aggiornato tramite una copia temporanea, che sostituisce il file solo a scrittura completata, per ridurre il rischio di danneggiarlo in caso di interruzione.</p>
+<p>Per riprendere:</p>
+<ol><li>Riavviare il programma e, se richiesto, accedere con le credenziali dell'account. La lista è vuota.</li><li>Premere «Importa da Storico», inserire la password dell'archivio e selezionare la sessione: vengono caricate le opzioni rimaste dopo l'ultima estrazione confermata e la numerazione prosegue dall'ultima registrata.</li><li>Premere «Prepara» e proseguire.</li></ol>
+<p>Un valore che al momento di un'interruzione improvvisa era sullo schermo ma non era ancora stato confermato con «Prossima Estrazione» non risulta registrato nella sessione e compare tra le opzioni importate. Con la chiusura ordinaria del programma, invece, il valore viene registrato prima dell'uscita (vedere <a href="#faq-chiudere">Come si chiude il programma?</a>).</p>
+</div>
+</details>
+<details class="faq-item" id="faq-backup" name="faq">
+<summary><span class="faq-q">Come si conserva una copia di sicurezza dei dati o si trasferiscono su un altro computer?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Con il programma chiuso, copiare l'intera cartella <code>%APPDATA%\CS_Estrattore</code> su un supporto esterno.</p>
+<p>Per trasferire i dati su un altro computer: installare il programma e copiare la cartella nella stessa posizione (<code>%APPDATA%</code>) dell'utente di Windows che userà il programma. Archivio delle sessioni, storico, account e password dell'archivio saranno di nuovo disponibili.</p>
+<p>Se sul computer di destinazione il programma è già stato usato, la copia sostituirebbe i dati presenti: in questo caso contattare l'assistenza.</p>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-schermo" aria-labelledby="faq-schermo-title">
+<h3 class="faq-group-title" id="faq-schermo-title">Schermo, proiezione e comandi</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-f11" name="faq">
+<summary><span class="faq-q">Come si esce dallo schermo intero? A che cosa serve il tasto F11?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Il programma si avvia a schermo intero. Il tasto <kbd>F11</kbd> passa dallo schermo intero alla finestra (circa il 90% dello schermo, centrata) e viceversa.</p>
+<p>In entrambi i casi la schermata in corso (logo, attesa o valore estratto) viene ridisegnata senza perdere lo stato.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-proiettore" name="faq">
+<summary><span class="faq-q">Che cosa succede se si collega o si scollega un proiettore o cambia la risoluzione?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Quando cambiano le dimensioni della finestra (collegamento o scollegamento del proiettore, cambio di risoluzione), il programma ridisegna la schermata corrente adattandola. Il valore estratto e il comando «Prossima Estrazione» restano visualizzati. Durante l'animazione, il fotogramma successivo usa già le nuove dimensioni.</p>
+<p>Le dimensioni dei caratteri sono proporzionate all'altezza dello schermo.</p>
+<p>Per mostrare la stessa schermata sul computer e sul proiettore si consiglia la modalità «Duplica» di Windows (tasti <kbd>Windows</kbd>+<kbd>P</kbd>). Se dopo il cambio la finestra non occupa bene lo schermo, premere <kbd>F11</kbd> due volte.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-pannello-proiettato" name="faq">
+<summary><span class="faq-q">Il pannello dei comandi è visibile sullo schermo proiettato?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Sì, se il proiettore duplica lo schermo del computer. Il pannello si apre con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra e occupa la parte destra dello schermo.</p>
+<p>Si chiude da solo quando si preme «Prepara» e quando parte l'estrazione; si può chiudere anche con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> o con un clic sulla schermata.</p>
+<p>Anche la schermata di accesso dell'account occupa l'intero schermo ed è quindi visibile sullo schermo proiettato. Le password si digitano in campi mascherati da asterischi.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-tasti" name="faq">
+<summary><span class="faq-q">Quali tasti e scorciatoie sono disponibili?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<ul><li><strong><kbd>SPAZIO</kbd></strong>: avvia l'estrazione dopo «Prepara». Non funziona mentre si scrive in un campo di testo.</li><li><strong><kbd>F11</kbd></strong>: attiva o disattiva lo schermo intero.</li><li><strong><kbd>Invio</kbd> ed <kbd>Esc</kbd></strong>: nelle finestre di messaggio e di inserimento del programma, <kbd>Invio</kbd> equivale a «OK» o «Sì» (oppure al pulsante selezionato con <kbd>Tab</kbd>) ed <kbd>Esc</kbd> ad «Annulla» o «No». Vale anche per la finestra di chiusura del programma: <kbd>Invio</kbd> conferma la chiusura.</li><li><strong>Nella schermata di accesso</strong>: <kbd>Invio</kbd> in uno dei campi equivale a «Crea account» o «Accedi».</li><li><strong>Nella finestra di selezione delle sessioni</strong>: <kbd>Invio</kbd> conferma, <kbd>Esc</kbd> annulla, la freccia giù passa dalla ricerca all'elenco e il doppio clic conferma una sessione.</li><li><strong>Rotellina del mouse</strong>: scorre il pannello e la scheda «Storico».</li></ul>
+</div>
+</details>
+<details class="faq-item" id="faq-chiudere" name="faq">
+<summary><span class="faq-q">Come si chiude il programma?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>Premere il pulsante rosso «Esci dal programma» in fondo al pannello. Il programma chiede «Confermare la chiusura del programma?».</p>
+<ul><li><strong>«Sì»</strong>: compare un breve messaggio di saluto e il programma si chiude dopo circa due secondi.</li><li><strong>«No»</strong>: si torna al programma.</li></ul>
+<p>La stessa conferma viene chiesta se si chiude la finestra con i comandi di Windows, ad esempio <kbd>Alt</kbd>+<kbd>F4</kbd>.</p>
+<p>Se sullo schermo è ancora visualizzato un valore estratto non confermato con «Prossima Estrazione», confermando la chiusura il valore viene prima registrato nello storico della sessione, come avviene con «Nuova Estrazione».</p>
+<p>Il pulsante «Esci dal programma» è presente anche nella schermata di accesso dell'account.</p>
+</div>
+</details>
+</div>
+</section>
+<section class="faq-group" id="faq-assistenza" aria-labelledby="faq-assistenza-title">
+<h3 class="faq-group-title" id="faq-assistenza-title">Problemi comuni e assistenza</h3>
+<div class="faq-list">
+<details class="faq-item" id="faq-spazio-non-funziona" name="faq">
+<summary><span class="faq-q">Il tasto SPAZIO non avvia l'estrazione. Che cosa controllare?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<ul><li>Premere prima «Prepara»: senza questo passaggio la lista non viene acquisita.</li><li>Controllare che la lista contenga almeno due opzioni.</li><li>Controllare che il cursore non sia in un campo di testo del pannello. Chiudere il pannello con <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> o con un clic sulla schermata.</li><li>Se è visualizzato un valore estratto, fare clic su «Prossima Estrazione».</li><li>Durante l'animazione il tasto <kbd>SPAZIO</kbd> non ha effetto.</li></ul>
+</div>
+</details>
+<details class="faq-item" id="faq-messaggi-intervalli" name="faq">
+<summary><span class="faq-q">Che cosa significano i messaggi che compaiono durante l'inserimento degli intervalli?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<ul><li><strong>«Inserire solo numeri validi.»</strong>: nei campi dei numeri ci sono caratteri diversi da numeri interi, oppure un campo è vuoto.</li><li><strong>«Il numero di inizio deve essere minore di quello finale.»</strong>: correggere l'intervallo.</li><li><strong>«Inserire solo lettere singole dell'alfabeto.»</strong>: in ogni campo delle lettere va indicata una sola lettera da A a Z.</li><li><strong>«La lettera di inizio deve precedere quella finale.»</strong>: correggere l'intervallo.</li></ul>
+</div>
+</details>
+<details class="faq-item" id="faq-messaggi-archivio" name="faq">
+<summary><span class="faq-q">Che cosa significano i messaggi relativi all'archivio e al PDF?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<ul><li><strong>«L'archivio delle sessioni ('<code>ArchivioSessioni.zip</code>') non è stato ancora creato.»</strong>: non è stata ancora preparata nessuna sessione. L'archivio viene creato alla prima pressione di «Prepara» con una nuova sessione.</li><li><strong>«Errore Archivio - Impossibile salvare la sessione»</strong>: il programma non è riuscito a scrivere nella cartella dei dati. Controllare lo spazio libero sul disco e contattare l'assistenza indicando il testo del messaggio.</li><li><strong>«Errore Esportazione PDF»</strong>: il file non è stato creato. Controllare, ad esempio, che un PDF con lo stesso nome non sia aperto in un altro programma, oppure scegliere un nome o una cartella diversi.</li><li><strong>«Lo storico selezionato è vuoto. Nulla da esportare.»</strong>: la sessione scelta non contiene registrazioni.</li></ul>
+</div>
+</details>
+<details class="faq-item" id="faq-link-non-si-aprono" name="faq">
+<summary><span class="faq-q">Il sito di supporto o il sito aziendale non si aprono. Che cosa fare?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<p>I collegamenti si aprono nel browser predefinito di Windows e le pagine richiedono una connessione a Internet. Se il browser o l'applicazione di posta non si avviano, il programma mostra la finestra «Errore Apertura Link» con l'indirizzo; senza connessione il browser si apre ma non carica la pagina.</p>
+<p>Controllare la connessione oppure aprire a mano l'indirizzo <a href="https://vmarius98.github.io/cs-estrattore-supporto/" target="_blank" rel="noopener noreferrer">https://vmarius98.github.io/cs-estrattore-supporto/<span class="sr-only"> (si apre in una nuova scheda)</span></a>.</p>
+</div>
+</details>
+<details class="faq-item" id="faq-contatti" name="faq">
+<summary><span class="faq-q">Come si contatta l'assistenza?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+<div class="faq-a">
+<ul><li><strong>Email</strong>: <a class="js-email" href="mailto:sviluppo@ciesseselezione.it?subject=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A">sviluppo@ciesseselezione.it</a></li><li><strong>Telefono</strong>: <a href="tel:+39067900345">06.7900345</a></li><li><strong>Sito aziendale</strong>: <a href="https://www.consulenzaeselezione.com/" target="_blank" rel="noopener noreferrer">https://www.consulenzaeselezione.com/<span class="sr-only"> (si apre in una nuova scheda)</span></a></li></ul>
+<p>Nella segnalazione conviene indicare la versione del programma (scheda «Aiuto»), il testo esatto dell'eventuale messaggio e l'operazione che si stava eseguendo. La scheda «Aiuto» del programma contiene il collegamento a questo sito di supporto.</p>
+</div>
+</details>
+</div>
+</section>
+          <div class="faq-empty" id="faq-empty" hidden>
+            <span class="faq-empty-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/></svg></span>
+            <p class="faq-empty-title">Nessuna domanda corrisponde alla ricerca.</p>
+            <p class="faq-empty-text">Provare con un termine diverso oppure contattare l'assistenza.</p>
+            <div class="faq-empty-actions">
+              <button type="button" class="btn btn-secondary btn-sm" data-search-clear>Cancella la ricerca</button>
+              <a class="btn btn-primary btn-sm" href="#contatti">Contatti</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contatti" aria-labelledby="contatti-title">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Contatti</p>
+        <h2 class="section-title" id="contatti-title">Assistenza</h2>
+        <p class="section-lead">Per richieste di assistenza o per segnalare un problema è possibile scrivere all'indirizzo email dedicato oppure telefonare.</p>
+      </header>
+      <ul class="contact-grid" role="list">
+        <li class="contact-card">
+          <span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.6 6.6 8.4 6.4 8.4-6.4"/></svg></span>
+          <h3 class="card-title">Email</h3>
+          <p class="card-text">Indirizzo dedicato all'assistenza sul programma.</p>
+          <p class="contact-value">sviluppo@ciesseselezione.it</p>
+          <a class="btn btn-primary js-email" href="mailto:sviluppo@ciesseselezione.it?subject=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A">Scrivere all'assistenza</a>
+        </li>
+        <li class="contact-card">
+          <span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5.2 4h3.3l1.6 4-2.1 1.4a11 11 0 0 0 6.6 6.6l1.4-2.1 4 1.6v3.3a1.9 1.9 0 0 1-2 1.9A16.2 16.2 0 0 1 3.3 6a1.9 1.9 0 0 1 1.9-2z"/></svg></span>
+          <h3 class="card-title">Telefono</h3>
+          <p class="card-text">Assistenza telefonica.</p>
+          <p class="contact-value">06.7900345</p>
+          <a class="btn btn-secondary" href="tel:+39067900345">Chiamare il 06.7900345</a>
+        </li>
+        <li class="contact-card">
+          <span class="card-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg></span>
+          <h3 class="card-title">Sito aziendale</h3>
+          <p class="card-text">Informazioni su C&amp;S - Consulenza e Selezione e sulle sue sedi.</p>
+          <p class="contact-value">consulenzaeselezione.com</p>
+          <a class="btn btn-secondary" href="https://www.consulenzaeselezione.com/" target="_blank" rel="noopener noreferrer">Visitare il sito <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg><span class="sr-only"> (si apre in una nuova scheda)</span></a>
+        </li>
+      </ul>
+      <div class="report-box">
+        <div class="report-intro">
+          <h3 class="report-title">Informazioni utili per la segnalazione</h3>
+          <p>Per facilitare l'analisi della richiesta, indicare:</p>
+        </div>
+        <ul class="check-list">
+          <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>la versione del programma, riportata nella scheda «Aiuto» (attualmente 1.1.0);</span></li>
+          <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>il testo esatto dell'eventuale messaggio comparso;</span></li>
+          <li><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>l'operazione che si stava eseguendo.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inizio" class="footer-logo-link"><img class="footer-logo" src="logo-cs-esteso.png" width="677" height="98" alt="C&amp;S - Consulenza e Selezione" loading="lazy"></a>
+        <p>Centro di supporto per gli utenti di C&amp;S - Estrattore Casuale di Numeri e Lettere.</p>
+        <p class="footer-credit">Software sviluppato da Marius per C&amp;S - Consulenza e Selezione.</p>
+      </div>
+      <nav class="footer-col" aria-label="Sezioni del centro di supporto">
+        <h2 class="footer-title">Supporto</h2>
+        <ul>
+          <li><a href="#guide">Guide</a></li>
+          <li><a href="#faq">Domande frequenti</a></li>
+          <li><a href="#video-dimostrativo">Video dimostrativo</a></li>
+          <li><a href="#faq-account">Account e accesso</a></li>
+          <li><a href="#faq-conservazione">Conservazione dei dati</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2 class="footer-title">Contatti</h2>
+        <ul>
+          <li><a class="js-email" href="mailto:sviluppo@ciesseselezione.it?subject=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A">sviluppo@ciesseselezione.it</a></li>
+          <li><a href="tel:+39067900345">06.7900345</a></li>
+          <li><a href="https://www.consulenzaeselezione.com/" target="_blank" rel="noopener noreferrer">consulenzaeselezione.com<span class="sr-only"> (si apre in una nuova scheda)</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025-2026 C&amp;S - Consulenza e Selezione. Tutti i diritti riservati.</p>
+      <p>Versione software 1.1.0</p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal-guida-rapida" aria-modal="true" aria-labelledby="modal-guida-rapida-title" aria-describedby="modal-guida-rapida-desc">
+<div class="modal-panel">
+<div class="modal-head">
+<span class="modal-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M10 8.6v6.8l5.4-3.4z"/></svg></span>
+<div class="modal-heading">
+<p class="modal-eyebrow">Guida &middot; 8 passaggi</p>
+<h2 class="modal-title" id="modal-guida-rapida-title" tabindex="-1">Guida rapida</h2>
+<p class="modal-desc" id="modal-guida-rapida-desc">I passaggi essenziali per preparare ed eseguire le estrazioni di una sessione.</p>
+</div>
+<button type="button" class="modal-close" data-modal-close aria-label="Chiudi la guida"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+</div>
+<div class="modal-body" tabindex="0" role="region" aria-label="Passaggi della guida">
+<ol class="steps" role="list">
+<li><span class="step-num"><span class="sr-only">Passaggio </span>1</span><p>Avviare il programma dal menu Start o dal collegamento sul Desktop. Al primo avvio creare l'account nella schermata «Crea il tuo account»; agli avvii successivi, se richiesto, accedere con le credenziali. Compare il logo C&amp;S a schermo intero.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>2</span><p>Aprire il pannello dei comandi con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra (scheda «Prepara Estrazione»).</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>3</span><p>Inserire le opzioni. In «GENERA INTERVALLO» indicare l'intervallo di numeri o di lettere e premere «Aggiungi», oppure digitare un valore per riga nella «LISTA OPZIONI».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>4</span><p>Quando richiesto, inserire la password dell'archivio (alla prima sessione va impostata) e il nome della sessione, ad esempio il nome del concorso e la data odierna con i trattini.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>5</span><p>Controllare la lista e premere «Prepara». Il pannello si chiude e compare la schermata di attesa con il logo C&amp;S.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>6</span><p>Premere <kbd>SPAZIO</kbd> oppure «AVVIA ESTRAZIONE». Dopo l'animazione «ESTRAZIONE IN CORSO...» compare il valore estratto con la scritta «ESTRATTO».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>7</span><p>Fare clic su «Prossima Estrazione». L'estrazione viene registrata, il valore viene tolto dalla lista e il programma si prepara per la successiva. Premere di nuovo <kbd>SPAZIO</kbd>.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>8</span><p>Quando resta una sola opzione, il programma mostra il messaggio di conclusione. Lo storico resta consultabile nella scheda «Storico» e si può esportare con «Esporta Storico PDF».</p></li>
+</ol>
+</div>
+<div class="modal-foot">
+<p class="modal-foot-note">Ulteriori dettagli nelle <a href="#faq" data-modal-close>domande frequenti</a>.</p>
+<button type="button" class="btn btn-primary btn-sm" data-modal-close>Chiudi</button>
+</div>
+</div>
+</dialog>
+<dialog class="modal" id="modal-guida-installazione" aria-modal="true" aria-labelledby="modal-guida-installazione-title" aria-describedby="modal-guida-installazione-desc">
+<div class="modal-panel">
+<div class="modal-head">
+<span class="modal-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5v10.5"/><path d="m7.5 9.5 4.5 4.5 4.5-4.5"/><path d="M4 15.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2.5"/></svg></span>
+<div class="modal-heading">
+<p class="modal-eyebrow">Guida &middot; 8 passaggi</p>
+<h2 class="modal-title" id="modal-guida-installazione-title" tabindex="-1">Installazione e primo avvio</h2>
+<p class="modal-desc" id="modal-guida-installazione-desc">Installazione del programma, avviso di Windows, creazione dell'account e primo utilizzo.</p>
+</div>
+<button type="button" class="modal-close" data-modal-close aria-label="Chiudi la guida"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+</div>
+<div class="modal-body" tabindex="0" role="region" aria-label="Passaggi della guida">
+<ol class="steps" role="list">
+<li><span class="step-num"><span class="sr-only">Passaggio </span>1</span><p>Avviare il file di installazione, il cui nome inizia con «Installazione-C&amp;S - Estrattore Casuale di Numeri e Lettere v1.1.0».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>2</span><p>Se compare la schermata «Windows ha protetto il PC», fare clic su «Ulteriori informazioni» e poi su «Esegui comunque».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>3</span><p>Se compare la finestra «Seleziona modo installazione», scegliere «Installa per tutti gli utenti (suggerito)», che richiede i diritti di amministratore, oppure «Installa solo per l'utente attuale». Se si è scelta l'installazione per tutti gli utenti, alla richiesta di Windows «Vuoi consentire a questa app di apportare modifiche al dispositivo?» rispondere «Sì».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>4</span><p>Accettare il contratto di licenza, leggere le informazioni preliminari e scegliere la cartella di destinazione (predefinita: Programmi; per l'installazione per il solo utente attuale una cartella del profilo utente).</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>5</span><p>Indicare se creare il collegamento sul Desktop e completare l'installazione. Al termine il programma può essere avviato subito.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>6</span><p>Al primo avvio compare, a schermo intero, la schermata «Crea il tuo account». Indicare un nome utente di almeno 3 caratteri e una password di almeno 6 caratteri, ripetere la password nel campo «Conferma password» e premere «Crea account». Con la casella «Ricorda l'accesso su questo computer», selezionata in modo predefinito, agli avvii successivi il programma si apre senza richiedere le credenziali.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>7</span><p>Dopo la creazione dell'account compare il logo C&amp;S. Il pannello dei comandi si apre con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>8</span><p>Alla creazione della prima sessione (pressione di «Aggiungi» o «Prepara») il programma chiede di impostare la password dell'archivio delle sessioni, distinta da quella dell'account. Digitarla, controllarla e confermarla con «Sì».</p></li>
+</ol>
+</div>
+<div class="modal-foot">
+<p class="modal-foot-note">Ulteriori dettagli nelle <a href="#faq" data-modal-close>domande frequenti</a>.</p>
+<button type="button" class="btn btn-primary btn-sm" data-modal-close>Chiudi</button>
+</div>
+</div>
+</dialog>
+<dialog class="modal" id="modal-guida-importazione" aria-modal="true" aria-labelledby="modal-guida-importazione-title" aria-describedby="modal-guida-importazione-desc">
+<div class="modal-panel">
+<div class="modal-head">
+<span class="modal-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1"/><path d="M3.5 4.5v4h4"/><path d="M12 7.5V12l3 2"/></svg></span>
+<div class="modal-heading">
+<p class="modal-eyebrow">Guida &middot; 7 passaggi</p>
+<h2 class="modal-title" id="modal-guida-importazione-title" tabindex="-1">Importazione dallo storico</h2>
+<p class="modal-desc" id="modal-guida-importazione-desc">Ripresa di una sessione salvata, anche dopo una chiusura del programma o del computer.</p>
+</div>
+<button type="button" class="modal-close" data-modal-close aria-label="Chiudi la guida"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+</div>
+<div class="modal-body" tabindex="0" role="region" aria-label="Passaggi della guida">
+<ol class="steps" role="list">
+<li><span class="step-num"><span class="sr-only">Passaggio </span>1</span><p>Aprire il pannello con <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> e premere «Importa da Storico».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>2</span><p>Inserire la password dell'archivio. Se è stata dimenticata, il collegamento «Password dimenticata?» permette di impostarne una nuova con la password dell'account.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>3</span><p>Nella finestra «Seleziona Sessione da Importare» digitare nel campo «Cerca» una parte del nome della sessione, oppure scorrere l'elenco. Con «Più recenti» o «Meno recenti» si ordinano le sessioni per data dell'ultimo aggiornamento.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>4</span><p>Selezionare la sessione e premere «Conferma» (oppure doppio clic o <kbd>Invio</kbd>). Se la ricerca lascia una sola sessione, «Conferma» la seleziona direttamente.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>5</span><p>Se la lista corrente non è vuota, confermare la sua sostituzione con quella importata. Rispondendo «No» l'importazione viene annullata e la sessione attiva resta invariata.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>6</span><p>Il programma carica le opzioni rimaste dopo l'ultima estrazione registrata e indica quante ne ha importate. La sessione importata diventa la sessione attiva e la numerazione delle estrazioni prosegue dall'ultima registrata nella sessione.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>7</span><p>Premere «Prepara» e proseguire con <kbd>SPAZIO</kbd>. Le nuove estrazioni vengono aggiunte allo storico della stessa sessione.</p></li>
+</ol>
+</div>
+<div class="modal-foot">
+<p class="modal-foot-note">Ulteriori dettagli nelle <a href="#faq" data-modal-close>domande frequenti</a>.</p>
+<button type="button" class="btn btn-primary btn-sm" data-modal-close>Chiudi</button>
+</div>
+</div>
+</dialog>
+<dialog class="modal" id="modal-guida-pdf" aria-modal="true" aria-labelledby="modal-guida-pdf-title" aria-describedby="modal-guida-pdf-desc">
+<div class="modal-panel">
+<div class="modal-head">
+<span class="modal-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-10z"/><path d="M14 3.5v5h5"/><path d="M8.5 13h7M8.5 16.5h4.5"/></svg></span>
+<div class="modal-heading">
+<p class="modal-eyebrow">Guida &middot; 6 passaggi</p>
+<h2 class="modal-title" id="modal-guida-pdf-title" tabindex="-1">Esportazione PDF</h2>
+<p class="modal-desc" id="modal-guida-pdf-desc">Creazione di un documento PDF con lo storico di una sessione.</p>
+</div>
+<button type="button" class="modal-close" data-modal-close aria-label="Chiudi la guida"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+</div>
+<div class="modal-body" tabindex="0" role="region" aria-label="Passaggi della guida">
+<ol class="steps" role="list">
+<li><span class="step-num"><span class="sr-only">Passaggio </span>1</span><p>Aprire il pannello con <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> e premere «Esporta Storico PDF».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>2</span><p>Inserire la password dell'archivio.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>3</span><p>Nella finestra «Seleziona Storico da Esportare in PDF» cercare e selezionare la sessione, poi premere «Conferma».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>4</span><p>Nella finestra «Salva Storico come PDF» scegliere la cartella di destinazione. Il nome proposto è quello della sessione e si può modificare.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>5</span><p>Premere «Salva». Il programma conferma l'operazione e indica il percorso completo del file.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>6</span><p>Il PDF, in formato A4, riporta la lista iniziale completa, ogni estrazione con numero progressivo e valore estratto e, dopo ogni estrazione, l'elenco delle opzioni rimaste con data e ora.</p></li>
+</ol>
+</div>
+<div class="modal-foot">
+<p class="modal-foot-note">Ulteriori dettagli nelle <a href="#faq" data-modal-close>domande frequenti</a>.</p>
+<button type="button" class="btn btn-primary btn-sm" data-modal-close>Chiudi</button>
+</div>
+</div>
+</dialog>
+<dialog class="modal" id="modal-guida-nuova-estrazione" aria-modal="true" aria-labelledby="modal-guida-nuova-estrazione-title" aria-describedby="modal-guida-nuova-estrazione-desc">
+<div class="modal-panel">
+<div class="modal-head">
+<span class="modal-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.5 11A7.5 7.5 0 0 0 6.2 7L4.5 8.5"/><path d="M4.5 4.5v4h4"/><path d="M4.5 13a7.5 7.5 0 0 0 13.3 4l1.7-1.5"/><path d="M19.5 19.5v-4h-4"/></svg></span>
+<div class="modal-heading">
+<p class="modal-eyebrow">Guida &middot; 6 passaggi</p>
+<h2 class="modal-title" id="modal-guida-nuova-estrazione-title" tabindex="-1">Nuova estrazione</h2>
+<p class="modal-desc" id="modal-guida-nuova-estrazione-desc">Chiusura della sessione attiva e avvio di una nuova procedura senza uscire dal programma.</p>
+</div>
+<button type="button" class="modal-close" data-modal-close aria-label="Chiudi la guida"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+</div>
+<div class="modal-body" tabindex="0" role="region" aria-label="Passaggi della guida">
+<ol class="steps" role="list">
+<li><span class="step-num"><span class="sr-only">Passaggio </span>1</span><p>Aprire il pannello con <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> e premere «Nuova Estrazione». Durante l'animazione dell'estrazione il pulsante non ha effetto.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>2</span><p>Leggere il messaggio «Avviare una nuova estrazione?», che indica la sessione che verrà chiusa, e confermare con «Sì».</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>3</span><p>Se sullo schermo c'è ancora un valore non confermato con «Prossima Estrazione», il valore viene registrato nello storico della sessione prima della chiusura.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>4</span><p>La lista e i campi vengono svuotati e lo schermo torna al logo. Lo storico delle estrazioni resta disponibile.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>5</span><p>Inserire la nuova lista. Alla pressione di «Aggiungi» o «Prepara» vengono chiesti la password dell'archivio e il nome della nuova sessione.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>6</span><p>Premere «Prepara» e avviare l'estrazione con <kbd>SPAZIO</kbd>.</p></li>
+</ol>
+</div>
+<div class="modal-foot">
+<p class="modal-foot-note">Ulteriori dettagli nelle <a href="#faq" data-modal-close>domande frequenti</a>.</p>
+<button type="button" class="btn btn-primary btn-sm" data-modal-close>Chiudi</button>
+</div>
+</div>
+</dialog>
+
+<dialog class="modal" id="modal-email" aria-modal="true" aria-labelledby="modal-email-title" aria-describedby="modal-email-desc">
+  <div class="modal-panel modal-panel--sm">
+    <div class="modal-head">
+      <span class="modal-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.6 6.6 8.4 6.4 8.4-6.4"/></svg></span>
+      <div class="modal-heading">
+        <p class="modal-eyebrow">Assistenza</p>
+        <h2 class="modal-title" id="modal-email-title" tabindex="-1">Scrivere all'assistenza</h2>
+        <p class="modal-desc" id="modal-email-desc">Selezionare la modalità di invio della richiesta.</p>
+      </div>
+      <button type="button" class="modal-close" data-modal-close aria-label="Chiudi"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="email-box">
+        <span class="email-box-label">Indirizzo email</span>
+        <span class="email-box-value" id="email-address">sviluppo@ciesseselezione.it</span>
+      </div>
+      <ul class="option-list" role="list">
+        <li>
+          <a class="option" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sviluppo@ciesseselezione.it&amp;su=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A" target="_blank" rel="noopener noreferrer">
+            <span class="option-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="15" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.8h.01M9.2 6.8h.01"/></svg></span>
+            <span class="option-text"><span class="option-title">Apri Gmail</span><span class="option-desc">Il messaggio viene preparato in Gmail, in una nuova scheda del browser.</span></span>
+            <svg class="icon option-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="option" href="mailto:sviluppo@ciesseselezione.it?subject=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A">
+            <span class="option-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 13h4.5l1.5 2.5h5L16 13h4.5"/><path d="M6 5h12l2.5 8v5a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2v-5z"/></svg></span>
+            <span class="option-text"><span class="option-title">Apri app di posta</span><span class="option-desc">Il messaggio viene preparato nell'applicazione di posta predefinita del dispositivo.</span></span>
+            <svg class="icon option-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9.5 6 6 6-6 6"/></svg>
+          </a>
+        </li>
+        <li>
+          <button type="button" class="option" data-copy-email>
+            <span class="option-icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></svg></span>
+            <span class="option-text"><span class="option-title">Copia indirizzo</span><span class="option-desc">L'indirizzo viene copiato negli appunti, per incollarlo in qualsiasi programma di posta.</span></span>
+            <svg class="icon option-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9.5 6 6 6-6 6"/></svg>
+          </button>
+        </li>
+      </ul>
+      <p class="modal-note"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><path d="M12 7.6v.1"/></svg><span>Nella richiesta indicare la versione del programma, il testo esatto dell'eventuale messaggio e l'operazione che si stava eseguendo.</span></p>
+    </div>
+    <div class="modal-foot">
+      <button type="button" class="btn btn-secondary btn-sm" data-modal-close>Chiudi</button>
+    </div>
+  </div>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div>
+</dialog>
+
+<div class="toast-region toast-region--page" aria-live="polite" aria-atomic="true"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
