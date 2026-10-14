@@ -213,7 +213,7 @@
 <summary><span class="faq-q">Come si avvia il programma e che cosa compare al primo avvio?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
 <div class="faq-a">
 <p>Il programma si avvia dal collegamento «Estrattore Casuale di Numeri e Lettere» nel menu Start o sul Desktop e occupa l'intero schermo.</p>
-<p>Al primo avvio compare la schermata «Crea il tuo account», in cui si impostano il nome utente e la password dell'account (vedere <a href="#faq-account-creazione">Come si crea l'account al primo avvio?</a>). Agli avvii successivi il programma si apre direttamente se l'accesso è stato ricordato; in caso contrario compare la schermata «Bentornato», in cui inserire le credenziali.</p>
+<p>Al primo avvio compare la schermata «Crea il tuo account», in cui si impostano il nome utente e la password dell'account (vedere <a href="#faq-account-creazione">Come si crea l'account al primo avvio?</a>). A ogni avvio successivo compare la schermata «Bentornato»: se l'accesso è ricordato, nome utente e password sono già inseriti ed è sufficiente premere «Accedi» (vedere <a href="#faq-account-accesso">Agli avvii successivi vengono richieste le credenziali?</a>).</p>
 <p>Dopo l'accesso compare il logo C&amp;S su sfondo bianco. Il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra apre e chiude il pannello dei comandi. Il pannello si chiude anche con un clic in un punto qualsiasi della schermata principale. Il pannello contiene le schede «Prepara Estrazione», «Storico» e «Aiuto».</p>
 <p>La password dell'archivio delle sessioni non viene richiesta all'avvio: si imposta alla creazione della prima sessione (vedere <a href="#faq-password-richiesta">Quando viene richiesta la password dell'archivio?</a>).</p>
 </div>
@@ -250,7 +250,7 @@
 <summary><span class="faq-q">Come si crea l'account al primo avvio?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
 <div class="faq-a">
 <p>Al primo avvio il programma mostra, a schermo intero, la schermata «Crea il tuo account». Finché l'account non viene creato, il pannello dei comandi e il tasto <kbd>SPAZIO</kbd> non sono disponibili.</p>
-<ol><li>Nel campo «Nome utente» indicare un nome di almeno 3 caratteri.</li><li>Nel campo «Password» digitare una password di almeno 6 caratteri. I caratteri vengono mascherati da asterischi.</li><li>Nel campo «Conferma password» digitare di nuovo la stessa password.</li><li>Lasciare selezionata la casella «Ricorda l'accesso su questo computer», selezionata in modo predefinito, per aprire direttamente il programma agli avvii successivi; deselezionarla per inserire le credenziali a ogni avvio.</li><li>Premere «Crea account» oppure <kbd>Invio</kbd>.</li></ol>
+<ol><li>Nel campo «Nome utente» indicare un nome di almeno 3 caratteri.</li><li>Nel campo «Password» digitare una password di almeno 6 caratteri. I caratteri vengono mascherati da asterischi.</li><li>Nel campo «Conferma password» digitare di nuovo la stessa password.</li><li>La casella «Ricorda l'accesso su questo computer» è selezionata in modo predefinito: se resta selezionata, agli avvii successivi nome utente e password sono già inseriti nella schermata «Bentornato» ed è sufficiente premere «Accedi»; se viene deselezionata, a ogni avvio occorre digitare la password.</li><li>Premere «Crea account» oppure <kbd>Invio</kbd>. Il programma si apre.</li></ol>
 <p>Se i dati non sono validi, sopra il pulsante compare uno dei messaggi «Il nome utente deve contenere almeno 3 caratteri.», «La password deve contenere almeno 6 caratteri.» oppure «Le due password non coincidono.».</p>
 <p>La password dell'account serve anche a reimpostare la password dell'archivio delle sessioni in caso di smarrimento (vedere <a href="#faq-password-dimenticata">Che cosa fare se la password dell'archivio è stata dimenticata?</a>). Il pulsante «Esci dal programma», presente nella stessa schermata, chiude il programma dopo la conferma.</p>
 </div>
@@ -258,32 +258,35 @@
 <details class="faq-item" id="faq-account-accesso" name="faq">
 <summary><span class="faq-q">Agli avvii successivi vengono richieste le credenziali?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
 <div class="faq-a">
-<p>Dipende dalla casella «Ricorda l'accesso su questo computer»:</p>
-<ul><li><strong>selezionata</strong>: il programma si apre direttamente, senza richiedere le credenziali;</li><li><strong>non selezionata</strong>: compare la schermata «Bentornato», con il nome utente già inserito. Digitare la password e premere «Accedi» oppure <kbd>Invio</kbd>.</li></ul>
+<p>Sì. A ogni avvio successivo alla creazione dell'account compare la schermata «Bentornato» e il programma si apre solo dopo l'accesso. Il contenuto della schermata dipende dalla casella «Ricorda l'accesso su questo computer» al momento dell'ultimo accesso o della creazione dell'account:</p>
+<ul><li><strong>selezionata</strong>: nome utente e password sono già inseriti; è sufficiente premere «Accedi» oppure <kbd>Invio</kbd>;</li><li><strong>non selezionata</strong>: è inserito solo il nome utente. Digitare la password e premere «Accedi» oppure <kbd>Invio</kbd>.</li></ul>
 <p>Nel nome utente maiuscole e minuscole sono equivalenti; nella password sono invece distinte. Se le credenziali non corrispondono compare il messaggio «Nome utente o password non corretti.» e la password va digitata di nuovo.</p>
-<p>Anche nella schermata «Bentornato» la casella «Ricorda l'accesso su questo computer» è selezionata in modo predefinito: se resta selezionata al momento dell'accesso, agli avvii successivi il programma si apre direttamente.</p>
+<p>Nella schermata «Bentornato» la casella «Ricorda l'accesso su questo computer» riporta la scelta salvata all'ultimo accesso o alla creazione dell'account e si può modificare prima di premere «Accedi». Se si accede con la casella deselezionata, la password ricordata viene eliminata e agli avvii successivi va digitata.</p>
+<p>Se la password ricordata non è disponibile, ad esempio dopo il trasferimento dei dati su un altro computer, è inserito solo il nome utente: digitare la password e accedere con la casella selezionata per ricordarla di nuovo.</p>
 </div>
 </details>
 <details class="faq-item" id="faq-account-credenziali" name="faq">
 <summary><span class="faq-q">Che cosa fare se le credenziali dell'account sono state dimenticate?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
 <div class="faq-a">
 <p>Nella schermata «Bentornato» il collegamento «Credenziali dimenticate?» mostra l'indirizzo dell'assistenza. Per reimpostare l'account occorre contattare l'assistenza all'indirizzo <a class="js-email" href="mailto:sviluppo@ciesseselezione.it?subject=Richiesta%20di%20assistenza%20-%20C%26S%20Estrattore&amp;body=Buongiorno%2C%0A%0A">sviluppo@ciesseselezione.it</a>.</p>
-<p>Il programma non può mostrare la password dell'account, perché non la conserva in chiaro.</p>
+<p>Il programma non mostra in nessun caso la password dell'account in chiaro. Se l'accesso è ricordato, nella schermata «Bentornato» nome utente e password sono già inseriti ed è sufficiente premere «Accedi».</p>
 </div>
 </details>
 <details class="faq-item" id="faq-account-disconnetti" name="faq">
 <summary><span class="faq-q">Come si visualizza l'utente collegato e come ci si disconnette?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
 <div class="faq-a">
 <p>Nella scheda «Aiuto» del pannello, sezione «ACCOUNT», sono indicati l'utente collegato («Utente: ...») e il collegamento «Disconnetti».</p>
-<p>Facendo clic su «Disconnetti» il programma chiede conferma con il messaggio «Disconnettere l'utente «...»?». Confermando con «Sì»:</p>
-<ul><li>compare subito la schermata «Bentornato»: per continuare a usare il programma occorre inserire di nuovo le credenziali;</li><li>l'accesso non è più ricordato: le credenziali vengono richieste anche agli avvii successivi, finché non si accede di nuovo con la casella «Ricorda l'accesso su questo computer» selezionata.</li></ul>
+<p>Facendo clic su «Disconnetti» il programma chiede conferma con il messaggio «Disconnettere l'utente «...»?», seguito da «Per continuare a usare il programma sarà necessario accedere di nuovo.». Confermando con «Sì»:</p>
+<ul><li>compare subito la schermata «Bentornato»: per continuare a usare il programma occorre accedere di nuovo;</li><li>la scelta «Ricorda l'accesso su questo computer» non cambia: se l'accesso è ricordato, nome utente e password sono già inseriti ed è sufficiente premere «Accedi».</li></ul>
+<p>Per non ricordare più la password su questo computer, deselezionare la casella «Ricorda l'accesso su questo computer» nella schermata «Bentornato» e accedere: la password ricordata viene eliminata.</p>
 </div>
 </details>
 <details class="faq-item" id="faq-account-dati" name="faq">
 <summary><span class="faq-q">Dove viene conservato l'account? Vale per tutti gli utenti del computer?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
 <div class="faq-a">
 <p>L'account è legato all'utente di Windows e viene salvato nella cartella dei dati del programma (<code>%APPDATA%\CS_Estrattore</code>). Ogni utente di Windows che usa il programma sullo stesso computer crea il proprio account al primo avvio.</p>
-<p>La password dell'account non viene salvata in chiaro: il programma conserva solo un'impronta crittografica non reversibile, con cui confronta la password digitata. Per questo la password non può essere visualizzata né recuperata dal programma.</p>
+<p>La password dell'account non viene salvata in chiaro: per la verifica il programma conserva un'impronta crittografica non reversibile, con cui confronta la password digitata.</p>
+<p>Se l'accesso è ricordato, il programma conserva inoltre la password dell'account cifrata con la protezione dei dati di Windows dell'utente corrente: può essere letta solo dallo stesso utente di Windows su questo computer e serve unicamente a inserire la password nella schermata «Bentornato», dove compare mascherata da asterischi. Il programma non mostra in nessun caso la password in chiaro. Poiché chi usa lo stesso utente di Windows può accedere premendo «Accedi», sui computer condivisi è preferibile deselezionare la casella «Ricorda l'accesso su questo computer» alla creazione dell'account o nella schermata «Bentornato».</p>
 <p>L'account resta disponibile dopo l'aggiornamento del programma ed è compreso nella copia della cartella dei dati (vedere <a href="#faq-backup">Come si conserva una copia di sicurezza dei dati?</a>).</p>
 </div>
 </details>
@@ -487,9 +490,9 @@
 <div class="faq-a">
 <p>Nella cartella <code>%APPDATA%\CS_Estrattore</code> dell'utente di Windows, ad esempio <code>C:\Users\[nome utente]\AppData\Roaming\CS_Estrattore</code>. Per aprirla premere <kbd>Windows</kbd>+<kbd>R</kbd>, digitare <code>%APPDATA%\CS_Estrattore</code> e premere <kbd>Invio</kbd>.</p>
 <p>La cartella contiene:</p>
-<ul><li><code>ArchivioSessioni.zip</code>: l'archivio delle sessioni, con un file per ogni sessione;</li><li><code>storico_estrazioni.log</code>: lo storico generale mostrato nella scheda «Storico»;</li><li>il file dell'account, con il nome utente e l'impronta della password dell'account;</li><li>un file di configurazione con l'impronta della password dell'archivio;</li><li><code>activity_log</code>: il registro tecnico di funzionamento del programma.</li></ul>
+<ul><li><code>ArchivioSessioni.zip</code>: l'archivio delle sessioni, con un file per ogni sessione;</li><li><code>storico_estrazioni.log</code>: lo storico generale mostrato nella scheda «Storico»;</li><li>il file dell'account, con il nome utente, l'impronta della password dell'account e, se l'accesso è ricordato, la password dell'account cifrata con la protezione dei dati di Windows;</li><li>un file di configurazione con l'impronta della password dell'archivio;</li><li><code>activity_log</code>: il registro tecnico di funzionamento del programma.</li></ul>
 <p>I dati restano sul computer e non vengono trasmessi in rete.</p>
-<p>I file della cartella non sono cifrati: la password dell'archivio regola l'accesso solo tramite le funzioni del programma. Si consiglia di proteggere l'account di Windows con una password e di conservare copie di sicurezza della cartella (vedere <a href="#faq-backup">Come si conserva una copia di sicurezza dei dati?</a>).</p>
+<p>I file della cartella non sono cifrati, a eccezione della password ricordata dell'account: la password dell'archivio regola l'accesso solo tramite le funzioni del programma. Si consiglia di proteggere l'account di Windows con una password e di conservare copie di sicurezza della cartella (vedere <a href="#faq-backup">Come si conserva una copia di sicurezza dei dati?</a>).</p>
 </div>
 </details>
 <details class="faq-item" id="faq-chiusura-improvvisa" name="faq">
@@ -497,7 +500,7 @@
 <div class="faq-a">
 <p>Ogni estrazione confermata con «Prossima Estrazione» viene salvata subito su disco, nello storico e nell'archivio delle sessioni, senza aspettare la chiusura del programma. L'archivio viene aggiornato tramite una copia temporanea, che sostituisce il file solo a scrittura completata, per ridurre il rischio di danneggiarlo in caso di interruzione.</p>
 <p>Per riprendere:</p>
-<ol><li>Riavviare il programma e, se richiesto, accedere con le credenziali dell'account. La lista è vuota.</li><li>Premere «Importa da Storico», inserire la password dell'archivio e selezionare la sessione: vengono caricate le opzioni rimaste dopo l'ultima estrazione confermata e la numerazione prosegue dall'ultima registrata.</li><li>Premere «Prepara» e proseguire.</li></ol>
+<ol><li>Riavviare il programma e accedere dalla schermata «Bentornato». La lista è vuota.</li><li>Premere «Importa da Storico», inserire la password dell'archivio e selezionare la sessione: vengono caricate le opzioni rimaste dopo l'ultima estrazione confermata e la numerazione prosegue dall'ultima registrata.</li><li>Premere «Prepara» e proseguire.</li></ol>
 <p>Un valore che al momento di un'interruzione improvvisa era sullo schermo ma non era ancora stato confermato con «Prossima Estrazione» non risulta registrato nella sessione e compare tra le opzioni importate. Con la chiusura ordinaria del programma, invece, il valore viene registrato prima dell'uscita (vedere <a href="#faq-chiudere">Come si chiude il programma?</a>).</p>
 </div>
 </details>
@@ -505,7 +508,7 @@
 <summary><span class="faq-q">Come si conserva una copia di sicurezza dei dati o si trasferiscono su un altro computer?</span><svg class="icon faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9.5 6 6 6-6"/></svg></summary>
 <div class="faq-a">
 <p>Con il programma chiuso, copiare l'intera cartella <code>%APPDATA%\CS_Estrattore</code> su un supporto esterno.</p>
-<p>Per trasferire i dati su un altro computer: installare il programma e copiare la cartella nella stessa posizione (<code>%APPDATA%</code>) dell'utente di Windows che userà il programma. Archivio delle sessioni, storico, account e password dell'archivio saranno di nuovo disponibili.</p>
+<p>Per trasferire i dati su un altro computer: installare il programma e copiare la cartella nella stessa posizione (<code>%APPDATA%</code>) dell'utente di Windows che userà il programma. Archivio delle sessioni, storico, account e password dell'archivio saranno di nuovo disponibili. La password ricordata dell'account può invece non essere disponibile: in questo caso, al primo accesso, digitare la password dell'account.</p>
 <p>Se sul computer di destinazione il programma è già stato usato, la copia sostituirebbe i dati presenti: in questo caso contattare l'assistenza.</p>
 </div>
 </details>
@@ -534,7 +537,7 @@
 <div class="faq-a">
 <p>Sì, se il proiettore duplica lo schermo del computer. Il pannello si apre con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra e occupa la parte destra dello schermo.</p>
 <p>Si chiude da solo quando si preme «Prepara» e quando parte l'estrazione; si può chiudere anche con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> o con un clic sulla schermata.</p>
-<p>Anche la schermata di accesso dell'account occupa l'intero schermo ed è quindi visibile sullo schermo proiettato. Le password si digitano in campi mascherati da asterischi.</p>
+<p>Anche la schermata di accesso dell'account occupa l'intero schermo ed è quindi visibile sullo schermo proiettato. Le password compaiono mascherate da asterischi, anche quando sono già inserite perché l'accesso è ricordato.</p>
 </div>
 </details>
 <details class="faq-item" id="faq-tasti" name="faq">
@@ -700,7 +703,7 @@
 </div>
 <div class="modal-body" tabindex="0" role="region" aria-label="Passaggi della guida">
 <ol class="steps" role="list">
-<li><span class="step-num"><span class="sr-only">Passaggio </span>1</span><p>Avviare il programma dal menu Start o dal collegamento sul Desktop. Al primo avvio creare l'account nella schermata «Crea il tuo account»; agli avvii successivi, se richiesto, accedere con le credenziali. Compare il logo C&amp;S a schermo intero.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>1</span><p>Avviare il programma dal menu Start o dal collegamento sul Desktop. Al primo avvio creare l'account nella schermata «Crea il tuo account»; agli avvii successivi accedere dalla schermata «Bentornato» (se l'accesso è ricordato, è sufficiente premere «Accedi»). Compare il logo C&amp;S a schermo intero.</p></li>
 <li><span class="step-num"><span class="sr-only">Passaggio </span>2</span><p>Aprire il pannello dei comandi con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra (scheda «Prepara Estrazione»).</p></li>
 <li><span class="step-num"><span class="sr-only">Passaggio </span>3</span><p>Inserire le opzioni. In «GENERA INTERVALLO» indicare l'intervallo di numeri o di lettere e premere «Aggiungi», oppure digitare un valore per riga nella «LISTA OPZIONI».</p></li>
 <li><span class="step-num"><span class="sr-only">Passaggio </span>4</span><p>Quando richiesto, inserire la password dell'archivio (alla prima sessione va impostata) e il nome della sessione, ad esempio il nome del concorso e la data odierna con i trattini.</p></li>
@@ -734,7 +737,7 @@
 <li><span class="step-num"><span class="sr-only">Passaggio </span>3</span><p>Se compare la finestra «Seleziona modo installazione», scegliere «Installa per tutti gli utenti (suggerito)», che richiede i diritti di amministratore, oppure «Installa solo per l'utente attuale». Se si è scelta l'installazione per tutti gli utenti, alla richiesta di Windows «Vuoi consentire a questa app di apportare modifiche al dispositivo?» rispondere «Sì».</p></li>
 <li><span class="step-num"><span class="sr-only">Passaggio </span>4</span><p>Accettare il contratto di licenza, leggere le informazioni preliminari e scegliere la cartella di destinazione (predefinita: Programmi; per l'installazione per il solo utente attuale una cartella del profilo utente).</p></li>
 <li><span class="step-num"><span class="sr-only">Passaggio </span>5</span><p>Indicare se creare il collegamento sul Desktop e completare l'installazione. Al termine il programma può essere avviato subito.</p></li>
-<li><span class="step-num"><span class="sr-only">Passaggio </span>6</span><p>Al primo avvio compare, a schermo intero, la schermata «Crea il tuo account». Indicare un nome utente di almeno 3 caratteri e una password di almeno 6 caratteri, ripetere la password nel campo «Conferma password» e premere «Crea account». Con la casella «Ricorda l'accesso su questo computer», selezionata in modo predefinito, agli avvii successivi il programma si apre senza richiedere le credenziali.</p></li>
+<li><span class="step-num"><span class="sr-only">Passaggio </span>6</span><p>Al primo avvio compare, a schermo intero, la schermata «Crea il tuo account». Indicare un nome utente di almeno 3 caratteri e una password di almeno 6 caratteri, ripetere la password nel campo «Conferma password» e premere «Crea account». A ogni avvio successivo compare la schermata «Bentornato»: se alla creazione dell'account la casella «Ricorda l'accesso su questo computer», selezionata in modo predefinito, resta selezionata, nome utente e password sono già inseriti ed è sufficiente premere «Accedi»; altrimenti occorre digitare la password.</p></li>
 <li><span class="step-num"><span class="sr-only">Passaggio </span>7</span><p>Dopo la creazione dell'account compare il logo C&amp;S. Il pannello dei comandi si apre con il pulsante <span class="ui-glyph" role="img" aria-label="menu"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span> in alto a destra.</p></li>
 <li><span class="step-num"><span class="sr-only">Passaggio </span>8</span><p>Alla creazione della prima sessione (pressione di «Aggiungi» o «Prepara») il programma chiede di impostare la password dell'archivio delle sessioni, distinta da quella dell'account. Digitarla, controllarla e confermarla con «Sì».</p></li>
 </ol>
